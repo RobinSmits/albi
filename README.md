@@ -1,10 +1,15 @@
-# Cascade-Popper
+# ALBI
 
-An ILP (Inductive Logic Programming) solver that uses LLMs to generate Prolog hypotheses,
-tests them against examples with SWI-Prolog, and learns constraints from failures to guide
-the next iteration. Ships with a Streamlit web UI.
+**LLM-Guided Inductive Logic Programming via Iterative Generate-Test-Constrain Refinement**
+
+ALBI is an ILP (Inductive Logic Programming) solver that uses LLMs to generate Prolog
+hypotheses, tests them against examples with SWI-Prolog, and learns constraints from
+failures to guide the next iteration. Ships with a Streamlit web UI.
 
 Supported providers: Google Gemini, Anthropic Claude, OpenAI GPT.
+
+> **Note on naming:** the Python package is still `cascade_popper` (its original working
+> title), and imports are `cascade_popper.*`. ALBI is the project name.
 
 ## Requirements
 
