@@ -1,0 +1,93 @@
+<ilp_task>
+  <system_role>
+    You are PROLOG-ILP, an expert Inductive Logic Programming compiler.
+    You operate as a deterministic theorem prover, not a chatbot.
+    You output ONLY valid Prolog code. No greetings. No explanations outside code.
+  </system_role>
+
+  <task>Synthesize a Prolog hypothesis from examples.</task>
+
+  <bias_hints>
+{bias_hints}
+  </bias_hints>
+
+  <background_knowledge description="The ONLY predicates you may use in the body">
+{background_knowledge}
+  </background_knowledge>
+
+  <examples>
+    <positive description="Your hypothesis MUST entail ALL of these">
+{positive_examples}
+    </positive>
+    <negative description="Your hypothesis MUST NOT entail ANY of these">
+{negative_examples}
+    </negative>
+  </examples>
+
+  <constraints>
+    <rule id="C1" name="CLOSED-WORLD ASSUMPTION">
+      You may ONLY use predicates that appear in the Background Knowledge.
+      DO NOT invent predicates. DO NOT hallucinate predicates.
+    </rule>
+    <rule id="C2" name="ONE CLAUSE PER LINE">
+      Every clause must be a single line ending with a period.
+      CORRECT: target(A) :- pred1(A,B), pred2(B,C), pred3(C).
+    </rule>
+    <rule id="C3" name="NO SINGLETON VARIABLES">
+      Every variable must appear at least twice, or use underscore (_).
+    </rule>
+    <rule id="C4" name="OCCAM'S RAZOR">
+      Prefer the SHORTEST hypothesis. Fewer literals = better.
+    </rule>
+    <rule id="C5" name="NO HARDCODING">
+      DO NOT enumerate specific constants. Use variables and predicates.
+    </rule>
+    <rule id="C6" name="PURE OUTPUT">
+      Output ONLY the prolog code block. No text before or after.
+    </rule>
+    <rule id="C7" name="AVOID NEGATION AS FAILURE">
+      DO NOT use negation as failure (\+ or not()) in Candidates 1 and 2.
+      Negation is ONLY allowed in Candidate 3 as a last resort alternative.
+    </rule>
+  </constraints>
+
+  <task_analysis required="true">
+    <instruction>Before generating, identify the task category in Prolog comments.</instruction>
+    <categories>
+      <category id="1" name="Relational Classification">trains, zendo, molecules</category>
+      <category id="2" name="List/Functional">reverse, filter, sort</category>
+      <category id="3" name="Game State">buttons, coins</category>
+      <category id="4" name="Graph/Kinship">ancestor, connected</category>
+    </categories>
+  </task_analysis>
+
+  <beam_search required="MANDATORY" enforcement="STRICT">
+    <warning>YOU MUST GENERATE EXACTLY 3 CANDIDATES. FAILURE TO DO SO IS A CRITICAL ERROR.</warning>
+    <instruction>Generate 3 DIFFERENT hypothesis candidates. YOU MUST use "---CANDIDATE---" separator between each.</instruction>
+    <rule>If you output only 1 hypothesis without ---CANDIDATE--- separators, YOUR OUTPUT IS INVALID.</rule>
+    <candidates>
+      <candidate id="1">SIMPLEST hypothesis - NO negation (\+) allowed</candidate>
+      <candidate id="2">More specific - NO negation (\+) allowed</candidate>
+      <candidate id="3">Alternative - may use negation (\+) if needed</candidate>
+    </candidates>
+    <output_format>
+```prolog
+% CANDIDATE 1 (Simplest):
+hypothesis_clause_1.
+
+---CANDIDATE---
+
+% CANDIDATE 2 (Specific):
+hypothesis_clause_2.
+
+---CANDIDATE---
+
+% CANDIDATE 3 (Alternative):
+hypothesis_clause_3.
+```
+    </output_format>
+    <reminder>You MUST include "---CANDIDATE---" between each hypothesis!</reminder>
+  </beam_search>
+
+  <action>GENERATE 3 CANDIDATES NOW with ---CANDIDATE--- separators!</action>
+</ilp_task>

@@ -1,0 +1,78 @@
+# Iteration N — Hypothesis FAILED
+
+## Current Hypothesis
+<print hypothesis here>
+
+## Outcome Summary
+- Positives covered: <Pcov> / <Ptotal>
+- Negatives covered (errors): <Ncov> (Target: 0)
+- Failure type: <TOO GENERAL / TOO SPECIFIC / MIXED>
+
+---
+
+## SECTION A: False Positives (Hypothesis is Too General)
+*Only relevant if Negatives covered > 0*
+
+### Key Counterexamples
+The hypothesis incorrectly covers these negative examples:
+- <neg_id_1>
+- <neg_id_2>
+...
+
+### Minimal Proof for One Counterexample (Trace)
+**Counterexample:** <neg_id_1>
+**Why it matched:**
+1) <literal_1> succeeded (Bindings: {V0=..., V1=...})
+2) <literal_2> succeeded (Bindings: {V1=..., V2=...})
+...
+(If disjunctive, satisfied branch: <branch_index>)
+
+### Relevant Facts for <neg_id_1>
+- piece(...)
+- <pred1>(...)
+- <pred2>(...)
+
+### Refinement Request (Specialization)
+Suggest a **new literal** to ADD to the clause to block this negative example while keeping the positives.
+Ranked Suggestions:
+1. Add: <literal> (Rationale: ...)
+2. Add: <literal> (Rationale: ...)
+
+---
+
+## SECTION B: Missed Positives (Hypothesis is Too Specific)
+*Only relevant if Positives covered < Ptotal*
+
+### Key Missed Positives
+The hypothesis failed to cover these valid examples:
+- <pos_id_1>
+- <pos_id_2>
+...
+
+### Trace of Failure
+**Example:** <pos_id_1>
+**Where the chain broke:**
+1) <literal_1> SUCCEEDED (Bindings: {V0=...})
+2) <literal_2> SUCCEEDED (Bindings: {...})
+3) **<literal_3> FAILED** (No facts in <pos_id_1> satisfy this constraint given bindings)
+
+### Relevant Facts for <pos_id_1>
+- piece(...)
+- <pred1>(...)
+- <pred2>(...)
+- ... (Include all facts for this example)
+
+### Refinement Request (Generalization / Disjunction)
+Since the current rule fails here, choose one strategy:
+1. **Generalize:** Remove or modify `<literal_3>` if it is too strict.
+2. **Branch (Disjunction):** Propose a **NEW, separate clause** (OR condition) that explains <pos_id_1>.
+
+---
+
+## NEXT ATTEMPT REQUEST
+Based on the analysis above, provide the refined hypothesis.
+
+**Constraints:**
+1. **Connectedness:** Every variable in the body must be connected to the head variable `V0`.
+2. **No Constants:** Use variables only (e.g., `coord1(A, B)` not `coord1(A, 5)`).
+3. **Format:** Return the Prolog rule(s) only.

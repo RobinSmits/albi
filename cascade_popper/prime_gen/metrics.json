@@ -1,0 +1,17 @@
+{
+  "task_dir": "c:\\Users\\admin\\Desktop\\app final\\app\\larg\\2\\cadcadefile\\cascade_popper\\prime_gen",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-05-15T13:12:58.826715",
+  "end_time": "2026-05-15T13:27:57.104852",
+  "total_time_seconds": 898.278,
+  "pos_count": 40,
+  "neg_count": 40,
+  "bk_size_bytes": 30585,
+  "total_iterations": 0,
+  "total_prolog_tests": 4,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f(N, P) :- add(N, _, P), \\+ (double(N, P), greater_than(N, 1)).",
+  "iterations": []
+}

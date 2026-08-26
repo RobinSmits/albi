@@ -1,0 +1,48 @@
+EAST-WEST TRAINS PROBLEM (Michalski & Stepp, 1977)
+==================================================
+
+ORIGINAL SOURCE:
+- Paper: "Inductive Inference as Rule-Guided Transformation of Symbolic Descriptions" 
+- Authors: Ryszard S. Michalski (1980)
+- Dataset: UCI Machine Learning Repository (https://archive.ics.uci.edu/dataset/103/trains)
+
+PROBLEM DESCRIPTION:
+This problem involves classifying trains as either Eastbound or Westbound based on their 
+structural properties. It is a classic benchmark in Inductive Logic Programming (ILP) 
+and machine learning.
+
+STRUCTURE:
+- Each train consists of multiple cars connected together
+- Each car has the following attributes:
+  * Length: short or long
+  * Shape: closedrect, dblopnrect, ellipse, engine, hexagon, jaggedtop, openrect, 
+           opentrap, slopetop, ushaped
+  * Roof type: open, closed, jagged, arc, flat, peaked
+  * Number of wheels: 2 or 3
+  * Number of loads: 0 to 3
+- Each car may carry loads of different shapes:
+  * circle, triangle, rectangle, hexagon
+
+RELATIONAL STRUCTURE:
+  train --> has_car --> car --> has_load --> load
+                         |
+                         +--> car properties (length, shape, roof, wheels)
+
+TASK:
+Determine a concise decision rule that distinguishes Eastbound trains (positive class) 
+from Westbound trains (negative class) based on the properties of their cars and loads.
+
+The rule should describe what structural property or combination of properties 
+makes a train belong to the positive (Eastbound) class.
+
+EXAMPLE PREDICATES:
+- has_car(Train, Car)      : Train has a car Car
+- has_load(Car, Load)      : Car carries load Load  
+- short(Car), long(Car)    : Car length
+- roof_open(Car), roof_closed(Car), roof_jagged(Car), roof_arc(Car) : Roof types
+- two_wheels(Car), three_wheels(Car) : Wheel count
+- circle(Load), triangle(Load), rectangle(Load), hexagon(Load) : Load shapes
+
+CITATION:
+Michalski, R. & Stepp, R. (1977). Trains [Dataset]. UCI Machine Learning Repository. 
+https://doi.org/10.24432/C5M01V

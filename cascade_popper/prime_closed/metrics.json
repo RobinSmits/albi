@@ -1,0 +1,17 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\app final\\app\\larg\\2\\cadcadefile\\cascade_popper\\prime_closed",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-05-15T17:21:19.292574",
+  "end_time": "2026-05-15T17:21:29.814641",
+  "total_time_seconds": 10.522,
+  "pos_count": 30,
+  "neg_count": 74,
+  "bk_size_bytes": 18137,
+  "total_iterations": 0,
+  "total_prolog_tests": 4,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f(N, P) :- pi(P, N), is_prime(P).",
+  "iterations": []
+}

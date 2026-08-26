@@ -1,0 +1,17 @@
+{
+  "batch_id": 57,
+  "parent_task": "prime_task",
+  "created_at": "2026-05-15T12:16:28.261863",
+  "status": "pending",
+  "pos_count": 10,
+  "neg_count": 10,
+  "bk_size_bytes": 4759,
+  "bk_size_kb": 4,
+  "solved": false,
+  "hypothesis": null,
+  "iterations": 0,
+  "covered_pos": 0,
+  "covered_neg": 0,
+  "is_generalizable": false,
+  "learning_time_seconds": 0
+}

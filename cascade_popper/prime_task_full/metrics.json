@@ -1,0 +1,17 @@
+{
+  "task_dir": "c:\\Users\\admin\\Desktop\\app final\\app\\larg\\2\\cadcadefile\\cascade_popper\\prime_task_full",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-05-15T12:41:54.418378",
+  "end_time": "2026-05-15T12:43:05.459731",
+  "total_time_seconds": 71.041,
+  "pos_count": 30,
+  "neg_count": 30,
+  "bk_size_bytes": 13619,
+  "total_iterations": 0,
+  "total_prolog_tests": 4,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "prime(X, Y) :- is_prime(X), is_prime(Y), no_prime_between(X, Y).",
+  "iterations": []
+}

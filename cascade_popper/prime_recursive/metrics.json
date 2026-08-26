@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\app final\\app\\larg\\2\\cadcadefile\\cascade_popper\\prime_recursive",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-05-15T16:53:52.595254",
+  "end_time": "2026-05-15T16:57:04.456082",
+  "total_time_seconds": 191.861,
+  "pos_count": 20,
+  "neg_count": 59,
+  "bk_size_bytes": 7760,
+  "total_iterations": 1,
+  "total_prolog_tests": 4,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f(N, P) :- one(N), two(P).\nf(N, P) :- prec(N, N1), f(N1, Q), next_prime(Q, P).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(N, P) :- one(N), two(P).\nf(N, P) :- prec(N, N1), f(N1, Q), next_prime(Q, P).",
+      "llm_time_seconds": 13.002,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.001,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 8
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 8
+}

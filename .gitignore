@@ -1,0 +1,35 @@
+# --- Secrets: never commit API keys ---
+.env
+.env.*
+.streamlit/secrets.toml
+**/secrets.toml
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# --- Runtime logs and traces ---
+*.log
+app.log
+
+# --- Prolog scratch files written during hypothesis testing ---
+temp_hyp.pl
+hyp_test.pl
+test_hypothesis.pl
+
+# --- LaTeX build artifacts ---
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.out
+*.synctex.gz
+
+# --- OS ---
+Thumbs.db
+desktop.ini
+.DS_Store

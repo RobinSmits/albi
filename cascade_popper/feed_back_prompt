@@ -1,0 +1,186 @@
+### TOO_SPECIFIC ###
+<feedback type="too_specific">
+  <header>HYPOTHESIS TOO SPECIFIC (False Negative)</header>
+  
+  <context>{partial_cover_context}</context>
+  
+  <status>
+    <coverage>{covered_pos}/{total_pos} positives ({coverage_pct}%)</coverage>
+    <negatives_rejected>{rejected_neg}/{total_neg}</negatives_rejected>
+    <goal>100% positive coverage, 0% negative coverage</goal>
+  </status>
+  
+  <problem>Your hypothesis REJECTED a positive example that it MUST accept.</problem>
+  
+  <failed_hypothesis>
+```prolog
+{previous_code}
+```
+  </failed_hypothesis>
+  
+  <missed_example>{failed_positive_example}</missed_example>
+  
+  <evidence description="Actual facts for this example from BK">
+```prolog
+{example_facts}
+```
+  </evidence>
+  
+  <diagnosis>
+    <instruction>Your rule has a constraint that the above facts do NOT satisfy.</instruction>
+    <options>
+      <option id="A">REMOVE the overly-specific constraint</option>
+      <option id="B">ADD a disjunctive clause (second rule) to cover this case</option>
+    </options>
+  </diagnosis>
+  
+  <constraints>
+    <rule id="C1">Use ONLY predicates from BK. No hallucination.</rule>
+    <rule id="C2">ONE CLAUSE PER LINE. No line breaks inside clauses.</rule>
+    <rule id="C3">No singleton variables. Use _ for unused vars.</rule>
+    <rule id="C6">Output ONLY prolog code block.</rule>
+  </constraints>
+  
+  <beam_search required="MANDATORY" enforcement="STRICT">
+    <warning>YOU MUST GENERATE EXACTLY 3 CANDIDATES. FAILURE TO DO SO IS A CRITICAL ERROR.</warning>
+    <instruction>Generate 3 DIFFERENT hypothesis candidates. YOU MUST use "---CANDIDATE---" separator between each.</instruction>
+    <rule>If you output only 1 hypothesis without ---CANDIDATE--- separators, YOUR OUTPUT IS INVALID.</rule>
+    <candidate id="1">Generalize existing rule - NO negation (\+) allowed</candidate>
+    <candidate id="2">Add disjunctive clause - NO negation (\+) allowed</candidate>
+    <candidate id="3">Alternative - may use negation (\+) if needed</candidate>
+    <reminder>You MUST include "---CANDIDATE---" between each hypothesis!</reminder>
+  </beam_search>
+  
+  <output_format>
+```prolog
+% CANDIDATE 1 (Generalize):
+your_rule_v1(A) :- body(A).
+
+---CANDIDATE---
+
+% CANDIDATE 2 (Add clause):
+your_rule_v2(A) :- different_body(A).
+
+---CANDIDATE---
+
+% CANDIDATE 3 (Alternative):
+```
+  </output_format>
+</feedback>
+
+### TOO_GENERAL ###
+<feedback type="too_general">
+  <header>HYPOTHESIS TOO GENERAL (False Positive)</header>
+  
+  <context>{partial_cover_context}</context>
+  
+  <status>
+    <coverage>{covered_pos}/{total_pos} positives ({coverage_pct}%)</coverage>
+    <negatives_covered>{covered_neg}/{total_neg} (MUST be 0)</negatives_covered>
+    <goal>100% positive coverage, 0% negative coverage</goal>
+  </status>
+  
+  <problem>Your hypothesis ACCEPTED a negative example that it MUST reject.</problem>
+  
+  <failed_hypothesis>
+```prolog
+{previous_code}
+```
+  </failed_hypothesis>
+  
+  <wrongly_covered_negative>{failed_negative_example}</wrongly_covered_negative>
+  
+  <evidence description="Actual facts for this negative example from BK">
+```prolog
+{example_facts}
+```
+  </evidence>
+  
+  <diagnosis>
+    <instruction>Your rule is too permissive. ADD a constraint that the negative does NOT satisfy but positives DO.</instruction>
+    <question>What property does this negative have that positives lack? Or vice versa?</question>
+  </diagnosis>
+  
+  <constraints>
+    <rule id="C1">Use ONLY predicates from BK. No hallucination.</rule>
+    <rule id="C2">ONE CLAUSE PER LINE. No line breaks inside clauses.</rule>
+    <rule id="C3">No singleton variables. Use _ for unused vars.</rule>
+    <rule id="C6">Output ONLY prolog code block.</rule>
+  </constraints>
+  
+  <beam_search required="MANDATORY" enforcement="STRICT">
+    <warning>YOU MUST GENERATE EXACTLY 3 CANDIDATES. FAILURE TO DO SO IS A CRITICAL ERROR.</warning>
+    <instruction>Generate 3 DIFFERENT hypothesis candidates. YOU MUST use "---CANDIDATE---" separator between each.</instruction>
+    <rule>If you output only 1 hypothesis without ---CANDIDATE--- separators, YOUR OUTPUT IS INVALID.</rule>
+    <candidate id="1">Minimal fix - NO negation (\+) allowed</candidate>
+    <candidate id="2">More specific fix - NO negation (\+) allowed</candidate>
+    <candidate id="3">Alternative - may use negation (\+) if needed</candidate>
+    <reminder>You MUST include "---CANDIDATE---" between each hypothesis!</reminder>
+  </beam_search>
+  
+  <output_format>
+```prolog
+% CANDIDATE 1 (Minimal):
+your_rule_v1(A) :- 
+
+---CANDIDATE---
+
+% CANDIDATE 2 (Specific):
+your_rule_v2(A) :- 
+
+---CANDIDATE---
+
+% CANDIDATE 3 (Alternative):
+```
+  </output_format>
+</feedback>
+
+### SYNTAX_ERROR ###
+<feedback type="syntax_error">
+  <header>COMPILATION FAILED: SYNTAX ERROR</header>
+  
+  <problem>Your code could not be parsed by the Prolog interpreter.</problem>
+  
+  <failed_code>
+```prolog
+{previous_code}
+```
+  </failed_code>
+  
+  <error_message>{prolog_error_message}</error_message>
+  
+  <common_fixes>
+    <fix>Missing period at end of clause</fix>
+    <fix>Clause split across multiple lines (MUST be single line)</fix>
+    <fix>Singleton variable (use _ instead)</fix>
+    <fix>Unbalanced parentheses</fix>
+    <fix>Invalid predicate name (must start lowercase)</fix>
+  </common_fixes>
+  
+  <output_format>
+```prolog
+% FIX: [What syntax error was corrected?]
+your_corrected_rule(A) :- valid_body(A).
+```
+  </output_format>
+</feedback>
+
+### CYCLE_DETECTED ###
+<feedback type="cycle_detected">
+  <header>CYCLE DETECTED (Repetitive Hypothesis)</header>
+  
+  <warning>STOP! You have proposed this EXACT hypothesis before, and it failed.</warning>
+  
+  <repeated_code>
+```prolog
+{previous_code}
+```
+  </repeated_code>
+  
+  <instructions>
+    <step>You are stuck in a Local Minimum.</step>
+    <step>The hypothesis above is INCORRECT. Do not try it again.</step>
+    <step>You MUST change your approach: different predicate, variable ordering, or concept.</step>
+    <step>Output a NEW hypothesis in a prolog block.</step>
+  </instructions>
+</feedback>
