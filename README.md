@@ -113,3 +113,7 @@ solver for large example sets.
 4. On failure, the constraint learner records *why* (too general, too specific, subsumed by
    a known-bad clause) and θ-subsumption prunes the search space.
 5. Repeat until the examples are covered or the iteration cap is reached.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
