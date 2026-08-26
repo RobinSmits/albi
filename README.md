@@ -73,7 +73,7 @@ cascade-popper/
     ├── loop.py              # main solve loop (CascadePopperLoop)
     ├── cascade_generator.py # prompt construction, task context
     ├── constraint_learner.py# analyses failures into constraints
-    ├── subsumption.py       # θ-subsumption pruning
+    ├── subsumption.py       # θ-subsumption pruning its working but not used 
     ├── theta.py             # substitution / unification helpers
     ├── tester.py            # runs hypotheses against examples via swipl
     ├── test_hypothesis.py   # hypothesis evaluation backend used by tester.py
@@ -111,7 +111,7 @@ solver for large example sets.
 2. The LLM proposes a Prolog hypothesis.
 3. The hypothesis is tested against the examples with SWI-Prolog.
 4. On failure, the constraint learner records *why* (too general, too specific, subsumed by
-   a known-bad clause) and θ-subsumption prunes the search space.
+   a known-bad clause) .
 5. Repeat until the examples are covered or the iteration cap is reached.
 
 ## License
