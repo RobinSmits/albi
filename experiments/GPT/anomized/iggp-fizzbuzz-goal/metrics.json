@@ -1,0 +1,48 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\iggp-fizzbuzz-goal",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-08T19:24:20.439387",
+  "end_time": "2026-04-08T20:01:18.552538",
+  "total_time_seconds": 2218.113,
+  "pos_count": 164,
+  "neg_count": 656,
+  "bk_size_bytes": 20292,
+  "total_iterations": 2,
+  "total_prolog_tests": 8,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "p1(A,B,0):-p6(B),p4(A,C),p8(C,15).\np1(A,B,25):-p6(B),p4(A,15).\np1(A,B,50):-p6(B),p4(A,20).\np1(A,B,75):-p6(B),p4(A,26).\np1(A,B,100):-p6(B),p4(A,30).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p1(A,B,0):-p6(B),p4(A,C),p8(C,15).\np1(A,B,25):-p6(B),p4(A,15).\np1(A,B,50):-p6(B),p4(A,20).\np1(A,B,75):-p6(B),p4(A,26).",
+      "llm_time_seconds": 800.896,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 163,
+      "covered_neg": 0,
+      "missed_pos": 1,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "p1(A,B,0):-p6(B),p4(A,C),p8(C,15).\np1(A,B,25):-p6(B),p4(A,15).\np1(A,B,50):-p6(B),p4(A,20).\np1(A,B,75):-p6(B),p4(A,26).\np1(A,B,100):-p6(B),p4(A,30).",
+      "llm_time_seconds": 1413.654,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 164,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

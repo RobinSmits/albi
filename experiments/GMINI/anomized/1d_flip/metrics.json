@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction1\\full_context\\1d_flip",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T08:06:57.278992",
+  "end_time": "2026-03-14T08:09:06.762074",
+  "total_time_seconds": 129.483,
+  "pos_count": 31,
+  "neg_count": 915,
+  "bk_size_bytes": 18319,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p1(A, B, C) :- p2(A, B, _), p3(B, D), p2(A, D, C).\np1(A, B, C) :- p2(A, B, _), p3(B, D), p6(A, D), p6(A, E), p3(E, F), p2(A, F, C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p1(A, B, C) :- p2(A, B, _), p3(B, D), p2(A, D, C).\np1(A, B, C) :- p2(A, B, _), p3(B, D), p6(A, D), p6(A, E), p3(E, F), p2(A, F, C).",
+      "llm_time_seconds": 127.152,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.002,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 31,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 9
+}

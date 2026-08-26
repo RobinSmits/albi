@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\iggp-buttons-goal",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-03-31T20:22:52.845691",
+  "end_time": "2026-03-31T20:23:46.020976",
+  "total_time_seconds": 53.175,
+  "pos_count": 22,
+  "neg_count": 22,
+  "bk_size_bytes": 2988,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "goal(A, B, C) :- role(B), not_my_true(A, _), int_0(C).\ngoal(A, B, C) :- role(B), my_true(A, D), prop_p(D), my_true(A, E), prop_q(E), my_true(A, F), prop_r(F), int_100(C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "goal(A, B, C) :- role(B), not_my_true(A, _), int_0(C).\ngoal(A, B, C) :- role(B), my_true(A, D), prop_p(D), my_true(A, E), prop_q(E), my_true(A, F), prop_r(F), int_100(C).",
+      "llm_time_seconds": 52.965,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 22,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 11
+}

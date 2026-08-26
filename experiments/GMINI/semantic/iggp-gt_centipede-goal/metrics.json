@@ -1,0 +1,63 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction\\full_context\\iggp-gt_centipede-goal",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T09:24:14.550483",
+  "end_time": "2026-03-14T09:35:48.211271",
+  "total_time_seconds": 693.661,
+  "pos_count": 20,
+  "neg_count": 400,
+  "bk_size_bytes": 1729,
+  "total_iterations": 3,
+  "total_prolog_tests": 10,
+  "total_subsumption_checks": 3,
+  "solved": true,
+  "solution": "goal(A, white, C) :- true_control(A, black), true_whitePayoff(A, C), true_blackPayoff(A, B), succ(B, C).\ngoal(A, black, C) :- true_control(A, black), true_blackPayoff(A, C), true_whitePayoff(A, W), succ(C, W).\ngoal(A, white, 0) :- true_control(A, white), true_whitePayoff(A, 0).\ngoal(A, black, C) :- true_control(A, white), true_blackPayoff(A, C), true_whitePayoff(A, 0).\ngoal(A, B, 0) :- true_control(A, black), true_whitePayoff(A, W), succ(W, X), succ(X, Y), succ(Y, BP), true_blackPayoff(A, BP), role(B).\ngoal(A, B, 0) :- true_control(A, white), true_blackPayoff(A, BP), true_whitePayoff(A, WP), succ(BP, WP), role(B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "goal(A, white, C) :- true_control(A, black), true_whitePayoff(A, C), true_blackPayoff(A, B), succ(B, C).\ngoal(A, black, C) :- true_control(A, black), true_blackPayoff(A, C), true_whitePayoff(A, W), succ(C, W).\ngoal(A, white, 0) :- true_control(A, white), true_whitePayoff(A, 0).\ngoal(A, black, C) :- true_control(A, white), true_blackPayoff(A, C), true_whitePayoff(A, 0).",
+      "llm_time_seconds": 209.014,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 6,
+      "covered_neg": 0,
+      "missed_pos": 14,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "goal(A, B, 0) :- true_control(A, black), true_whitePayoff(A, W), succ(W, X), succ(X, Y), succ(Y, BP), true_blackPayoff(A, BP), role(B).",
+      "llm_time_seconds": 99.17,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 2,
+      "result": "partial_cover",
+      "covered_pos": 8,
+      "covered_neg": 0,
+      "missed_pos": 12,
+      "is_complete": false
+    },
+    {
+      "iteration": 3,
+      "hypothesis": "goal(A, white, C) :- true_control(A, black), true_whitePayoff(A, C), true_blackPayoff(A, B), succ(B, C).\ngoal(A, black, C) :- true_control(A, black), true_blackPayoff(A, C), true_whitePayoff(A, W), succ(C, W).\ngoal(A, white, 0) :- true_control(A, white), true_whitePayoff(A, 0).\ngoal(A, black, C) :- true_control(A, white), true_blackPayoff(A, C), true_whitePayoff(A, 0).\ngoal(A, B, 0) :- true_control(A, black), true_whitePayoff(A, W), succ(W, X), succ(X, Y), succ(Y, BP), true_blackPayoff(A, BP), role(B).\ngoal(A, B, 0) :- true_control(A, white), true_blackPayoff(A, BP), true_whitePayoff(A, WP), succ(BP, WP), role(B).",
+      "llm_time_seconds": 383.012,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\kinship-ancestor",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-15T18:09:09.796819",
+  "end_time": "2026-04-15T18:17:35.026427",
+  "total_time_seconds": 505.23,
+  "pos_count": 3,
+  "neg_count": 0,
+  "bk_size_bytes": 135,
+  "total_iterations": 1,
+  "total_prolog_tests": 6,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A,B) :- p1(A,B).\np0(A,B) :- p2(A,B).\np0(A,B) :- p1(A,C), p0(C,B).\np0(A,B) :- p2(A,C), p0(C,B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A,B) :- p1(A,B).\np0(A,B) :- p2(A,B).\np0(A,B) :- p1(A,C), p0(C,B).\np0(A,B) :- p2(A,C), p0(C,B).",
+      "llm_time_seconds": 232.503,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 3,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 12
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 12
+}

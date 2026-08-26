@@ -1,0 +1,33 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\robots-functional",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-04T21:52:09.281486",
+  "end_time": "2026-04-04T22:01:11.297452",
+  "total_time_seconds": 542.016,
+  "pos_count": 20,
+  "neg_count": 0,
+  "bk_size_bytes": 521,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f(w(X,_),w(X,Y)):-at_top(w(X,Y)).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(w(X,_),w(X,Y)):-at_top(w(X,Y)).",
+      "llm_time_seconds": 542.003,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

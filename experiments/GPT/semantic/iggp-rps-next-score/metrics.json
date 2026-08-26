@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\iggp-rps-next-score",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-03T20:19:23.749107",
+  "end_time": "2026-04-03T20:27:18.771323",
+  "total_time_seconds": 475.022,
+  "pos_count": 108,
+  "neg_count": 356,
+  "bk_size_bytes": 6356,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "next_score(E,P,S) :- my_true_score(E,P,S), different(P,Q), does(E,P,A), does(E,Q,A).\nnext_score(E,P,N) :- my_true_score(E,P,S), my_succ(S,N), different(P,Q), does(E,P,A), does(E,Q,B), beats(A,B).\nnext_score(E,P,S) :- my_true_score(E,P,S), different(P,Q), does(E,P,A), does(E,Q,B), beats(B,A).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "next_score(E,P,S) :- my_true_score(E,P,S), different(P,Q), does(E,P,A), does(E,Q,A).\nnext_score(E,P,N) :- my_true_score(E,P,S), my_succ(S,N), different(P,Q), does(E,P,A), does(E,Q,B), beats(A,B).\nnext_score(E,P,S) :- my_true_score(E,P,S), different(P,Q), does(E,P,A), does(E,Q,B), beats(B,A).",
+      "llm_time_seconds": 473.82,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 108,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 15
+}

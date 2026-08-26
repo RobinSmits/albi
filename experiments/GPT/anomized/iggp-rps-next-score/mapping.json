@@ -1,0 +1,29 @@
+{
+  "predicates": {
+    "p0": "next_score",
+    "p1": "my_true_score",
+    "p2": "my_succ",
+    "p3": "does",
+    "p4": "beats",
+    "p5": "player",
+    "p6": "different",
+    "p7": "clause",
+    "p8": "var_type",
+    "p9": "my_true_step",
+    "p10": "c_p1",
+    "p11": "c_p2",
+    "p12": "action"
+  },
+  "constants": {
+    "c0": "ex",
+    "c1": "player",
+    "c2": "int",
+    "c3": "action",
+    "c4": "count",
+    "c5": "p1",
+    "c6": "scissors",
+    "c7": "p2",
+    "c8": "stone",
+    "c9": "paper"
+  }
+}

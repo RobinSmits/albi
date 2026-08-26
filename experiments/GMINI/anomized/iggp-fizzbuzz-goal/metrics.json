@@ -1,0 +1,48 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction1\\full_context\\iggp-fizzbuzz-goal",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T04:11:07.314454",
+  "end_time": "2026-03-14T04:18:42.071012",
+  "total_time_seconds": 454.757,
+  "pos_count": 164,
+  "neg_count": 656,
+  "bk_size_bytes": 20292,
+  "total_iterations": 2,
+  "total_prolog_tests": 8,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "p1(A, B, C) :- p6(B), p47(C), p4(A, D), p19(E), p8(D, E).\np1(A, B, C) :- p6(B), p49(C), p4(A, D), p21(D).\np1(A, B, C) :- p6(B), p50(C), p4(A, D), p27(D).\np1(A, B, C) :- p6(B), p51(C), p4(A, D), p32(D).\np1(A, B, C) :- p6(B), p48(C), p4(A, D), p37(D).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p1(A, B, C) :- p6(B), p47(C), p4(A, D), p19(E), p8(D, E).\np1(A, B, C) :- p6(B), p49(C), p4(A, D), p21(D).\np1(A, B, C) :- p6(B), p50(C), p4(A, D), p27(D).\np1(A, B, C) :- p6(B), p51(C), p4(A, D), p32(D).",
+      "llm_time_seconds": 320.661,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 163,
+      "covered_neg": 0,
+      "missed_pos": 1,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "p1(A, B, C) :- p6(B), p47(C), p4(A, D), p19(E), p8(D, E).\np1(A, B, C) :- p6(B), p49(C), p4(A, D), p21(D).\np1(A, B, C) :- p6(B), p50(C), p4(A, D), p27(D).\np1(A, B, C) :- p6(B), p51(C), p4(A, D), p32(D).\np1(A, B, C) :- p6(B), p48(C), p4(A, D), p37(D).",
+      "llm_time_seconds": 130.957,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 164,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

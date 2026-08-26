@@ -1,0 +1,48 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\iggp-fizzbuzz-goal",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-15T21:32:58.648476",
+  "end_time": "2026-04-15T21:46:41.160973",
+  "total_time_seconds": 822.512,
+  "pos_count": 164,
+  "neg_count": 656,
+  "bk_size_bytes": 20292,
+  "total_iterations": 2,
+  "total_prolog_tests": 8,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "p1(X, Y, 0) :- p4(X, B), p6(Y), p8(B, 13).\np1(X, Y, 25) :- p4(X, 15), p6(Y).\np1(X, Y, 50) :- p4(X, 20), p6(Y).\np1(X, Y, 75) :- p4(X, 26), p6(Y).\np1(X, Y, 100) :- p4(X, 30), p6(Y).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p1(X, Y, 0) :- p4(X, B), p6(Y), p8(B, 13).\np1(X, Y, 25) :- p4(X, 15), p6(Y).\np1(X, Y, 50) :- p4(X, 20), p6(Y).\np1(X, Y, 75) :- p4(X, 26), p6(Y).",
+      "llm_time_seconds": 635.338,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.001,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 163,
+      "covered_neg": 0,
+      "missed_pos": 1,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "p1(X, Y, 0) :- p4(X, B), p6(Y), p8(B, 13).\np1(X, Y, 25) :- p4(X, 15), p6(Y).\np1(X, Y, 50) :- p4(X, 20), p6(Y).\np1(X, Y, 75) :- p4(X, 26), p6(Y).\np1(X, Y, 100) :- p4(X, 30), p6(Y).",
+      "llm_time_seconds": 183.754,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 164,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

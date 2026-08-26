@@ -1,0 +1,33 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\robots-linear",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-15T17:52:09.435083",
+  "end_time": "2026-04-15T17:53:24.053192",
+  "total_time_seconds": 74.618,
+  "pos_count": 1,
+  "neg_count": 7,
+  "bk_size_bytes": 379,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A, F) :- p4(A, B), p4(B, C), p4(C, D), p4(D, E), p4(E, F).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A, F) :- p4(A, B), p4(B, C), p4(C, D), p4(D, E), p4(E, F).",
+      "llm_time_seconds": 74.547,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 1,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

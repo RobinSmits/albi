@@ -1,0 +1,52 @@
+{
+  "task_dir": "C:/Users/admin/Desktop/larg/2/cadcadefile/example_abstraction\\andersen",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-02-03T15:36:31.975348",
+  "end_time": "2026-02-03T15:55:45.602544",
+  "total_time_seconds": 1153.627,
+  "pos_count": 7,
+  "neg_count": 0,
+  "bk_size_bytes": 94,
+  "total_iterations": 2,
+  "total_prolog_tests": 9,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "pt(A,B) :- addr(A,B).\npt(A,B) :- assgn(A,C), pt(C,B).\npt(A,B) :- load(A,C), pt(C,D), pt(D,B).\npt(A,B) :- store(C,D), pt(C,A), pt(D,B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "pt(A,B) :- addr(A,B).\npt(A,B) :- assgn(A,C), pt(C,B).\npt(A,B) :- store(C,D), pt(C,A), pt(D,B).\npt(A,B) :- load(A,C), pt(C,D), pt(D,B).",
+      "llm_time_seconds": 124.237,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "too_specific",
+      "covered_pos": 3,
+      "covered_neg": 0,
+      "missed_pos": 4,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "pt(A,B) :- addr(A,B).\npt(A,B) :- assgn(A,C), pt(C,B).\npt(A,B) :- load(A,C), pt(C,D), pt(D,B).\npt(A,B) :- store(C,D), pt(C,A), pt(D,B).",
+      "llm_time_seconds": 94.627,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": true,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 7,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 18
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 18
+}

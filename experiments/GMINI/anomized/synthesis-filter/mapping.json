@@ -1,0 +1,28 @@
+{
+  "predicates": {
+    "p0": "f",
+    "p1": "empty",
+    "p2": "odd",
+    "p3": "even",
+    "p4": "head",
+    "p5": "tail",
+    "p6": "prepend",
+    "p7": "only_once",
+    "p8": "clause",
+    "p9": "body_literal",
+    "p10": "append",
+    "p11": "succ"
+  },
+  "constants": {
+    "c0": "enable_recursion",
+    "c1": "list",
+    "c2": "element",
+    "c3": "in",
+    "c4": "out",
+    "c5": "head",
+    "c6": "tail",
+    "c7": "prepend",
+    "c8": "count",
+    "c9": "empty"
+  }
+}

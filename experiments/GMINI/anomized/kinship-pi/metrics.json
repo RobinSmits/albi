@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction1\\full_context\\kinship-pi",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T02:12:21.793578",
+  "end_time": "2026-03-14T02:16:05.071657",
+  "total_time_seconds": 223.278,
+  "pos_count": 5,
+  "neg_count": 1,
+  "bk_size_bytes": 87,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A,B) :- p1(A,C), p2(_,B), p2(C,_).\np0(A,B) :- p2(A,_), p2(_,B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A,B) :- p1(A,C), p2(_,B), p2(C,_).\np0(A,B) :- p2(A,_), p2(_,B).",
+      "llm_time_seconds": 223.253,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.001,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 5,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 5
+}

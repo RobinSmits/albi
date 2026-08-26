@@ -1,0 +1,33 @@
+{
+  "predicates": {
+    "p0": "f",
+    "p1": "head",
+    "p2": "tail",
+    "p3": "increment",
+    "p4": "decrement",
+    "p5": "geq",
+    "p6": "empty",
+    "p7": "even",
+    "p8": "odd",
+    "p9": "one",
+    "p10": "zero",
+    "p11": "is_list",
+    "p12": "my_length",
+    "p13": "nonvar",
+    "p14": "length",
+    "p15": "cons",
+    "p16": "append",
+    "p17": "comps",
+    "p18": "sum",
+    "p19": "element",
+    "p20": "empty_in",
+    "p21": "empty_out"
+  },
+  "constants": {
+    "c0": "enable_recursion",
+    "c1": "list",
+    "c2": "element",
+    "c3": "in",
+    "c4": "out"
+  }
+}

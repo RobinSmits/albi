@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\1d_flip",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-02T20:12:54.730183",
+  "end_time": "2026-04-02T20:24:13.680585",
+  "total_time_seconds": 678.95,
+  "pos_count": 31,
+  "neg_count": 915,
+  "bk_size_bytes": 27143,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "out(A,B,C):-in(A,B,_),my_succ(B,D),in(A,D,C).\nout(A,B,C):-in(A,B,_),my_succ(B,D),empty(A,D),empty(A,E),my_succ(E,F),in(A,F,C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "out(A,B,C):-in(A,B,_),my_succ(B,D),in(A,D,C).\nout(A,B,C):-in(A,B,_),my_succ(B,D),empty(A,D),empty(A,E),my_succ(E,F),in(A,F,C).",
+      "llm_time_seconds": 676.474,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 31,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 9
+}

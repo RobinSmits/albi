@@ -1,0 +1,41 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction1\\full_context\\synthesis-alleven",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-13T12:04:19.132645",
+  "end_time": "2026-03-13T12:04:45.467968",
+  "total_time_seconds": 0,
+  "pos_count": 4,
+  "neg_count": 5,
+  "bk_size_bytes": 66,
+  "total_iterations": 1,
+  "total_prolog_tests": 3,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A) :- p4(A).\np0(A) :- p2(A,B), p6(B), p1(A,C), p0(C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A) :- p4(A).\np0(A) :- p2(A,B), p6(B), p1(A,C), p0(C).",
+      "llm_time_seconds": 25.715,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 4,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 7
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 7,
+  "num_clauses": 2,
+  "total_positives": 4,
+  "covered_positives": 4,
+  "covered_negatives": 0
+}

@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\1d_flip",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-03-31T19:54:17.508651",
+  "end_time": "2026-03-31T19:56:18.853388",
+  "total_time_seconds": 121.345,
+  "pos_count": 31,
+  "neg_count": 915,
+  "bk_size_bytes": 27143,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "out(E, P, V) :- in(E, P, _), my_succ(P, Q), in(E, Q, V).\nout(E, P, V) :- in(E, P, _), my_succ(P, Q), empty(E, Q), in(E, R, V), my_succ(S, R), empty(E, S).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "out(E, P, V) :- in(E, P, _), my_succ(P, Q), in(E, Q, V).\nout(E, P, V) :- in(E, P, _), my_succ(P, Q), empty(E, Q), in(E, R, V), my_succ(S, R), empty(E, S).",
+      "llm_time_seconds": 119.814,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 31,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 9
+}

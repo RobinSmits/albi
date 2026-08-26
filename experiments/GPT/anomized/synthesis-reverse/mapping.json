@@ -1,0 +1,23 @@
+{
+  "predicates": {
+    "p0": "f",
+    "p1": "head",
+    "p2": "tail",
+    "p3": "my_append",
+    "p4": "empty",
+    "p5": "append"
+  },
+  "constants": {
+    "c0": "enable_recursion",
+    "c1": "list",
+    "c2": "element",
+    "c3": "in",
+    "c4": "out",
+    "c5": "a",
+    "c6": "b",
+    "c7": "c",
+    "c8": "d",
+    "c9": "e",
+    "c10": "f"
+  }
+}

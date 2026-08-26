@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\iggp-attrition-next-score",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-03T00:48:17.788424",
+  "end_time": "2026-04-03T01:05:45.433604",
+  "total_time_seconds": 1047.645,
+  "pos_count": 6,
+  "neg_count": 650,
+  "bk_size_bytes": 2862,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "next_score(E,A,S) :- my_true_score(E,A,S), does(E,A,noop), does(E,_,lay_claim).\nnext_score(E,A,S) :- my_true_score(E,A,S), does(E,A,end_game).\nnext_score(E,A,S) :- my_true_score(E,A,S0), does(E,A,lay_claim), my_succ(S,S0).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "next_score(E,A,S) :- my_true_score(E,A,S), does(E,A,noop), does(E,_,lay_claim).\nnext_score(E,A,S) :- my_true_score(E,A,S), does(E,A,end_game).\nnext_score(E,A,S) :- my_true_score(E,A,S0), does(E,A,lay_claim), my_succ(S,S0).",
+      "llm_time_seconds": 1047.424,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 6,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 8
+}

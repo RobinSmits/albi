@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\iggp-buttons-goal",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-07T19:40:26.614933",
+  "end_time": "2026-04-07T19:51:14.725539",
+  "total_time_seconds": 648.111,
+  "pos_count": 22,
+  "neg_count": 22,
+  "bk_size_bytes": 2119,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A,B,C) :- p4(B), p19(C), p18(A,_).\np0(A,B,C) :- p4(B), p119(C), p2(A,D), p5(D), p2(A,E), p6(E), p2(A,F), p7(F).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A,B,C) :- p4(B), p19(C), p18(A,_).\np0(A,B,C) :- p4(B), p119(C), p2(A,D), p5(D), p2(A,E), p6(E), p2(A,F), p7(F).",
+      "llm_time_seconds": 647.641,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 22,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 11
+}

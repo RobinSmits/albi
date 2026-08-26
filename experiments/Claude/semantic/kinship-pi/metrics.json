@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\kinship-pi",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T19:46:00.316229",
+  "end_time": "2026-04-01T19:48:11.945903",
+  "total_time_seconds": 131.63,
+  "pos_count": 5,
+  "neg_count": 1,
+  "bk_size_bytes": 160,
+  "total_iterations": 1,
+  "total_prolog_tests": 3,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "inv1(A,B) :- mother(A,B).\ninv1(A,B) :- father(A,B).\ngrandparent(A,B) :- inv1(A,C), inv1(C,B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "inv1(A,B) :- mother(A,B).\ninv1(A,B) :- father(A,B).\ngrandparent(A,B) :- inv1(A,C), inv1(C,B).",
+      "llm_time_seconds": 38.008,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 5,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 8
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 8
+}

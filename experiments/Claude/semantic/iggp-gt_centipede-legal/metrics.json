@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\iggp-gt_centipede-legal",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T19:38:10.935395",
+  "end_time": "2026-04-01T19:38:58.835860",
+  "total_time_seconds": 47.901,
+  "pos_count": 30,
+  "neg_count": 30,
+  "bk_size_bytes": 1731,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "legal(X, A, finish) :- true_control(X, A).\nlegal(X, A, continue) :- true_control(X, A).\nlegal(X, A, noop) :- true_control(X, B), agent_white(B), agent_black(A).\nlegal(X, A, noop) :- true_control(X, B), agent_black(B), agent_white(A).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "legal(X, A, finish) :- true_control(X, A).\nlegal(X, A, continue) :- true_control(X, A).\nlegal(X, A, noop) :- true_control(X, B), agent_white(B), agent_black(A).\nlegal(X, A, noop) :- true_control(X, B), agent_black(B), agent_white(A).",
+      "llm_time_seconds": 47.729,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 30,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 8
+}

@@ -1,0 +1,37 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\synthesis-finddupl",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-14T23:42:09.628860",
+  "end_time": "2026-04-14T23:53:59.300134",
+  "total_time_seconds": 709.671,
+  "pos_count": 10,
+  "neg_count": 11,
+  "bk_size_bytes": 388,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A, B) :- p1(A, B), p2(A, C), p3(C, B).\np0(A, B) :- p2(A, C), p0(C, B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A, B) :- p1(A, B), p2(A, C), p1(C, B).\np0(A, B) :- p2(A, C), p0(C, B).\np0(A, B) :- p1(A, B), p2(A, C), p3(C, B).",
+      "llm_time_seconds": 382.378,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 10,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 16
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 10
+}

@@ -1,0 +1,63 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\iggp-fizzbuzz-goal",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-03T16:29:16.816903",
+  "end_time": "2026-04-03T17:08:18.496042",
+  "total_time_seconds": 2341.679,
+  "pos_count": 164,
+  "neg_count": 656,
+  "bk_size_bytes": 29416,
+  "total_iterations": 3,
+  "total_prolog_tests": 11,
+  "total_subsumption_checks": 3,
+  "solved": true,
+  "solution": "goal(E,A,0) :- role(A), true_count(E,C), less_than(C,31).\ngoal(E,A,0) :- role(A), true_count(E,31), true_success(E,S), less_than(S,15).\ngoal(E,A,25) :- role(A), true_count(E,31), true_success(E,S), less_than(14,S), less_than(S,20).\ngoal(E,A,50) :- role(A), true_count(E,31), true_success(E,S), less_than(19,S), succ(24,T), less_than(S,T).\ngoal(E,A,100) :- role(A), true_count(E,31), true_success(E,S), less_than(29,S).\ngoal(E,A,75) :- role(A), true_count(E,31), true_success(E,S), less_than(24,S), less_than(S,30).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "goal(E,A,0) :- role(A), true_count(E,C), less_than(C,31).\ngoal(E,A,0) :- role(A), true_count(E,31), true_success(E,S), less_than(S,15).\ngoal(E,A,25) :- role(A), true_count(E,31), true_success(E,S), less_than(14,S), less_than(S,20).\ngoal(E,A,50) :- role(A), true_count(E,31), true_success(E,S), less_than(19,S), succ(24,T), less_than(S,T).",
+      "llm_time_seconds": 868.622,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 162,
+      "covered_neg": 0,
+      "missed_pos": 2,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "goal(E,A,100) :- role(A), true_count(E,31), true_success(E,S), less_than(29,S).",
+      "llm_time_seconds": 628.471,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 1,
+      "covered_neg": 0,
+      "missed_pos": 163,
+      "is_complete": false
+    },
+    {
+      "iteration": 3,
+      "hypothesis": "goal(E,A,0) :- role(A), true_count(E,C), less_than(C,31).\ngoal(E,A,0) :- role(A), true_count(E,31), true_success(E,S), less_than(S,15).\ngoal(E,A,25) :- role(A), true_count(E,31), true_success(E,S), less_than(14,S), less_than(S,20).\ngoal(E,A,50) :- role(A), true_count(E,31), true_success(E,S), less_than(19,S), succ(24,T), less_than(S,T).\ngoal(E,A,100) :- role(A), true_count(E,31), true_success(E,S), less_than(29,S).\ngoal(E,A,75) :- role(A), true_count(E,31), true_success(E,S), less_than(24,S), less_than(S,30).",
+      "llm_time_seconds": 840.181,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 164,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

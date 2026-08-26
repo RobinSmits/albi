@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\synthesis-next",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T20:53:15.384862",
+  "end_time": "2026-04-01T20:55:54.388446",
+  "total_time_seconds": 159.004,
+  "pos_count": 7,
+  "neg_count": 4,
+  "bk_size_bytes": 98,
+  "total_iterations": 1,
+  "total_prolog_tests": 3,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "next_list(A, B) :- head(A, C), x(C), tail(A, D), head(D, B).\nnext_list(A, B) :- tail(A, C), next_list(C, B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "next_list(A, B) :- head(A, C), x(C), tail(A, D), head(D, B).\nnext_list(A, B) :- tail(A, C), next_list(C, B).",
+      "llm_time_seconds": 18.324,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 7,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 11
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 11
+}

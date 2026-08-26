@@ -1,0 +1,28 @@
+{
+  "predicates": {
+    "p0": "next_value",
+    "p1": "does",
+    "p2": "true_value",
+    "p3": "my_succ",
+    "p4": "press_button",
+    "p5": "noop",
+    "p6": "player",
+    "p7": "c1",
+    "p8": "c2",
+    "p9": "c3",
+    "p10": "c4",
+    "p11": "c5",
+    "p12": "clause",
+    "p13": "var_type"
+  },
+  "constants": {
+    "c0": "ex",
+    "c1": "int",
+    "c2": "agent",
+    "c3": "action",
+    "c4": "count",
+    "c5": "player",
+    "c6": "pressButton",
+    "c7": "noop"
+  }
+}

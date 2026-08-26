@@ -1,0 +1,35 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\iggp-gt_centipede-legal",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-15T18:38:07.140109",
+  "end_time": "2026-04-15T18:41:59.977839",
+  "total_time_seconds": 232.838,
+  "pos_count": 30,
+  "neg_count": 30,
+  "bk_size_bytes": 1082,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p1(X, Y, Z) :- p4(X, Y), p10(Z).\np1(X, Y, Z) :- p4(X, Y), p11(Z).\np1(X, Y, Z) :- p4(X, W), p14(W), p15(Y), p12(Z).\np1(X, Y, Z) :- p4(X, W), p15(W), p14(Y), p12(Z).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p1(X, Y, Z) :- p4(X, Y), p10(Z).\np1(X, Y, Z) :- p4(X, Y), p11(Z).\np1(X, Y, Z) :- p4(X, W), p14(W), p15(Y), p12(Z).\np1(X, Y, Z) :- p4(X, W), p15(W), p14(Y), p12(Z).",
+      "llm_time_seconds": 232.526,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 30,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 12
+}

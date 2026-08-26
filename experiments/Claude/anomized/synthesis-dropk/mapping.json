@@ -1,0 +1,25 @@
+{
+  "predicates": {
+    "p0": "f",
+    "p1": "head",
+    "p2": "tail",
+    "p3": "element",
+    "p4": "increment",
+    "p5": "decrement",
+    "p6": "geq",
+    "p7": "empty",
+    "p8": "even",
+    "p9": "odd",
+    "p10": "one",
+    "p11": "zero",
+    "p12": "is_list",
+    "p13": "succ"
+  },
+  "constants": {
+    "c0": "enable_recursion",
+    "c1": "list",
+    "c2": "element",
+    "c3": "in",
+    "c4": "out"
+  }
+}

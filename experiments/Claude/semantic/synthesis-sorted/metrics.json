@@ -1,0 +1,52 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\synthesis-sorted",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T20:59:34.302644",
+  "end_time": "2026-04-01T21:08:09.824457",
+  "total_time_seconds": 515.522,
+  "pos_count": 10,
+  "neg_count": 10,
+  "bk_size_bytes": 65253,
+  "total_iterations": 2,
+  "total_prolog_tests": 9,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "f(A) :- my_length(A, B), geq(2, B).\nf(A) :- comps(A, B, C), head(C, D), geq(D, B), f(C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(A) :- tail(A, B), empty(B).\nf(A) :- head(A, B), tail(A, C), head(C, D), geq(D, B), f(C).",
+      "llm_time_seconds": 26.86,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "too_specific",
+      "covered_pos": 9,
+      "covered_neg": 0,
+      "missed_pos": 1,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "f(A) :- tail(A, B), empty(B).\nf(A) :- head(A, _), tail(A, B), tail(B, C), empty(C).\nf(A) :- head(A, B), tail(A, C), head(C, D), geq(D, B), f(C).",
+      "llm_time_seconds": 147.306,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": true,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 10,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 19
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 12
+}

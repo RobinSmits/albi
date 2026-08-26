@@ -1,0 +1,35 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\iggp-minimal-decay-next-value",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-15T18:33:40.715817",
+  "end_time": "2026-04-15T18:34:54.713459",
+  "total_time_seconds": 73.998,
+  "pos_count": 8,
+  "neg_count": 46,
+  "bk_size_bytes": 286,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(X, Y) :- p1(X, _, Z), p4(Z), p11(Y).\np0(X, Y) :- p1(X, _, Z), p5(Z), p2(X, V), p3(Y, V).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(X, Y) :- p1(X, _, Z), p4(Z), p11(Y).\np0(X, Y) :- p1(X, _, Z), p5(Z), p2(X, V), p3(Y, V).",
+      "llm_time_seconds": 73.771,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.001,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 8,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 7
+}

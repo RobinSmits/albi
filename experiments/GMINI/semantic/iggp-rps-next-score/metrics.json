@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction\\full_context\\iggp-rps-next-score",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T09:44:35.601024",
+  "end_time": "2026-03-14T09:45:50.145774",
+  "total_time_seconds": 74.545,
+  "pos_count": 108,
+  "neg_count": 356,
+  "bk_size_bytes": 6356,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "next_score(A, B, C) :- my_true_score(A, B, C), does(A, B, D), different(B, E), does(A, E, D).\nnext_score(A, B, C) :- my_true_score(A, B, D), my_succ(D, C), does(A, B, E), different(B, F), does(A, F, G), beats(E, G).\nnext_score(A, B, C) :- my_true_score(A, B, C), does(A, B, D), different(B, E), does(A, E, F), beats(F, D).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "next_score(A, B, C) :- my_true_score(A, B, C), does(A, B, D), different(B, E), does(A, E, D).\nnext_score(A, B, C) :- my_true_score(A, B, D), my_succ(D, C), does(A, B, E), different(B, F), does(A, F, G), beats(E, G).\nnext_score(A, B, C) :- my_true_score(A, B, C), does(A, B, D), different(B, E), does(A, E, F), beats(F, D).",
+      "llm_time_seconds": 73.155,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 108,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 15
+}

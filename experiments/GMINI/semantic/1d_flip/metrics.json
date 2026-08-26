@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction\\full_context\\1d_flip",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T08:23:38.939463",
+  "end_time": "2026-03-14T08:26:04.127899",
+  "total_time_seconds": 145.188,
+  "pos_count": 31,
+  "neg_count": 915,
+  "bk_size_bytes": 27143,
+  "total_iterations": 1,
+  "total_prolog_tests": 4,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "out(A, B, C) :- in(A, B, _), my_succ(B, D), in(A, D, _), in(A, E, C), my_succ(E, F), empty(A, F).\nout(A, B, C) :- in(A, B, _), my_succ(B, D), empty(A, D), in(A, F, C), my_succ(E, F), empty(A, E).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "out(A, B, C) :- in(A, B, _), my_succ(B, D), in(A, D, _), in(A, E, C), my_succ(E, F), empty(A, F).\nout(A, B, C) :- in(A, B, _), my_succ(B, D), empty(A, D), in(A, F, C), my_succ(E, F), empty(A, E).",
+      "llm_time_seconds": 142.574,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 2,
+      "result": "solution_found_dc",
+      "covered_pos": 31,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 12
+}

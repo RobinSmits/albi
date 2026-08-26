@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\iggp-attrition-next-score",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-07T19:12:08.556709",
+  "end_time": "2026-04-07T19:32:37.264171",
+  "total_time_seconds": 1228.708,
+  "pos_count": 6,
+  "neg_count": 650,
+  "bk_size_bytes": 1503,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A,B,C) :- p1(A,B,c5), p6(A,B,C), p4(C,75).\np0(A,B,C) :- p1(A,B,c4), p6(A,B,D), p4(C,D), p4(C,75).\np0(A,B,C) :- p1(A,B,c6), p7(B,D), p1(A,D,c4), p6(A,B,C), p4(C,75).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A,B,C) :- p1(A,B,c5), p6(A,B,C), p4(C,75).\np0(A,B,C) :- p1(A,B,c4), p6(A,B,D), p4(C,D), p4(C,75).\np0(A,B,C) :- p1(A,B,c6), p7(B,D), p1(A,D,c4), p6(A,B,C), p4(C,75).",
+      "llm_time_seconds": 1228.219,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 6,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 12
+}

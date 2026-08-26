@@ -1,0 +1,26 @@
+{
+  "predicates": {
+    "p0": "f",
+    "p1": "at_top",
+    "p2": "at_bottom",
+    "p3": "at_left",
+    "p4": "at_right",
+    "p5": "move_left",
+    "p6": "move_right",
+    "p7": "move_up",
+    "p8": "move_down",
+    "p9": "use_module",
+    "p10": "library",
+    "p11": "size",
+    "p12": "w",
+    "p13": "non_functional",
+    "p14": "call"
+  },
+  "constants": {
+    "c0": "enable_recursion",
+    "c1": "in",
+    "c2": "out",
+    "c3": "clpfd",
+    "c4": "f"
+  }
+}

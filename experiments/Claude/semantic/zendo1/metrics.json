@@ -1,0 +1,33 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\zendo1",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T21:08:41.991441",
+  "end_time": "2026-04-01T21:09:14.526235",
+  "total_time_seconds": 32.535,
+  "pos_count": 20,
+  "neg_count": 20,
+  "bk_size_bytes": 15171,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "zendo(V0) :- piece(V0,V2), size(V2,V1), small(V1), contact(V2,V3), red(V3).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "zendo(V0) :- piece(V0,V2), size(V2,V1), small(V1), contact(V2,V3), red(V3).",
+      "llm_time_seconds": 31.877,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

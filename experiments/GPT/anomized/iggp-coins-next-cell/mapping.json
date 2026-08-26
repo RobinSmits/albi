@@ -1,0 +1,28 @@
+{
+  "predicates": {
+    "p0": "next_cell",
+    "p1": "does_jump",
+    "p2": "my_succ",
+    "p3": "my_true_cell",
+    "p4": "role",
+    "p5": "my_pos",
+    "p6": "different",
+    "p7": "c_zerocoins",
+    "p8": "c_onecoin",
+    "p9": "c_twocoins",
+    "p10": "clause",
+    "p11": "var_type",
+    "p12": "my_true_step"
+  },
+  "constants": {
+    "c0": "ex",
+    "c1": "pos",
+    "c2": "cell_value",
+    "c3": "agent",
+    "c4": "count",
+    "c5": "zerocoins",
+    "c6": "onecoin",
+    "c7": "twocoins",
+    "c8": "you"
+  }
+}

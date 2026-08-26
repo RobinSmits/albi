@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction\\full_context\\iggp-gt_centipede-legal",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T09:38:22.043251",
+  "end_time": "2026-03-14T09:39:12.759162",
+  "total_time_seconds": 50.716,
+  "pos_count": 30,
+  "neg_count": 30,
+  "bk_size_bytes": 1731,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "legal(A, B, C) :- true_control(A, B), action_continue(C).\nlegal(A, B, C) :- true_control(A, B), action_finish(C).\nlegal(A, B, C) :- true_control(A, D), agent_black(D), agent_white(B), action_noop(C).\nlegal(A, B, C) :- true_control(A, D), agent_white(D), agent_black(B), action_noop(C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "legal(A, B, C) :- true_control(A, B), action_continue(C).\nlegal(A, B, C) :- true_control(A, B), action_finish(C).\nlegal(A, B, C) :- true_control(A, D), agent_black(D), agent_white(B), action_noop(C).\nlegal(A, B, C) :- true_control(A, D), agent_white(D), agent_black(B), action_noop(C).",
+      "llm_time_seconds": 50.287,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.001,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 30,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 12
+}

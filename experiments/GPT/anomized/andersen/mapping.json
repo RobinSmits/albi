@@ -1,0 +1,20 @@
+{
+  "predicates": {
+    "p0": "pt",
+    "p1": "addr",
+    "p2": "assgn",
+    "p3": "store",
+    "p4": "load"
+  },
+  "constants": {
+    "c0": "enable_recursion",
+    "c1": "v2",
+    "c2": "v1",
+    "c3": "v6",
+    "c4": "v7",
+    "c5": "v3",
+    "c6": "v4",
+    "c7": "v5",
+    "c8": "v8"
+  }
+}

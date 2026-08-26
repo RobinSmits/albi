@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\kinship-ancestor",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-03T20:33:04.232468",
+  "end_time": "2026-04-03T20:44:40.696292",
+  "total_time_seconds": 696.464,
+  "pos_count": 3,
+  "neg_count": 0,
+  "bk_size_bytes": 457,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "ancestor(A,B):-mother(A,B).\nancestor(A,B):-father(A,C),mother(C,D),father(D,B).\nancestor(A,B):-mother(A,C),mother(C,D),father(D,B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "ancestor(A,B):-mother(A,B).\nancestor(A,B):-father(A,C),mother(C,D),father(D,B).\nancestor(A,B):-mother(A,C),mother(C,D),father(D,B).",
+      "llm_time_seconds": 695.945,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 3,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 7
+}

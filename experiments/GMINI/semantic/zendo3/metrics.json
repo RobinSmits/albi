@@ -1,0 +1,70 @@
+{
+  "task_dir": "C:/Users/admin/Desktop/cadcadefile/example_abstraction\\zendo3",
+  "model": "gemini-3-pro-preview",
+  "start_time": "2026-01-12T01:21:20.801430",
+  "end_time": "2026-01-12T01:53:51.930189",
+  "total_time_seconds": 1951.129,
+  "total_iterations": 7,
+  "total_prolog_tests": 23,
+  "total_subsumption_checks": 7,
+  "solved": true,
+  "solution": "zendo(A) :- piece(A,B), piece(A,C), B \\= C, coord1(B,X), coord1(C,X), blue(B), \\+ green(C).\nzendo(A) :- piece(A,B), contact(B,C), (rhs(B), size(C,S) ; blue(B), size(B,S), upright(C)), large(S).",
+  "iterations": [
+    {
+      "iteration": 2,
+      "hypothesis": "zendo(A) :- contact(B,C), blue(B), \\+ blue(C), large(B).",
+      "llm_time_seconds": 211.471,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "result": "too_specific",
+      "covered_pos": 0,
+      "covered_neg": 0,
+      "missed_pos": 50
+    },
+    {
+      "iteration": 4,
+      "hypothesis": "zendo(A) :- piece(A,B), piece(A,C), contact(B,C), rhs(B), \\+ lhs(C).",
+      "llm_time_seconds": 104.659,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "result": "too_general",
+      "covered_pos": 17,
+      "covered_neg": 1,
+      "missed_pos": 33
+    },
+    {
+      "iteration": 5,
+      "hypothesis": "zendo(A) :- piece(A,B), piece(A,C), contact(B,C), rhs(B), \\+ lhs(C), \\+ small(B), \\+ small(C).",
+      "llm_time_seconds": 74.283,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "result": "too_general",
+      "covered_pos": 17,
+      "covered_neg": 1,
+      "missed_pos": 33
+    },
+    {
+      "iteration": 7,
+      "hypothesis": "zendo(A) :- piece(A,B), piece(A,C), contact(B,C), blue(B), blue(C), \\+ strange(B), \\+ strange(C).",
+      "llm_time_seconds": 14.271,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "result": "solution",
+      "covered_pos": 50,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "f1_score": 1.0,
+      "num_literals": 43
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 22
+}

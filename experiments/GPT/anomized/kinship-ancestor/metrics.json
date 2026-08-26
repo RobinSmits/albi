@@ -1,0 +1,33 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\kinship-ancestor",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-08T21:48:23.862124",
+  "end_time": "2026-04-08T22:03:38.282893",
+  "total_time_seconds": 914.421,
+  "pos_count": 3,
+  "neg_count": 0,
+  "bk_size_bytes": 135,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(_,B):-p1(_,B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(_,B):-p1(_,B).",
+      "llm_time_seconds": 913.907,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 3,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\iggp-coins-next-cell",
+  "model": "gpt-5.4-pro",
+  "strategy": "Batch Scalable (BBSILP)",
+  "start_time": "2026-04-08T19:01:49.358638",
+  "end_time": "2026-04-08T19:10:18.314349",
+  "total_time_seconds": 508.956,
+  "pos_count": 576,
+  "neg_count": 1968,
+  "bk_size_bytes": 13906,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A,B,C) :- p3(A,B,C), p1(A,_,X,Y), p6(B,X), p6(B,Y).\np0(A,B,C) :- p1(A,_,B,_), p7(C).\np0(A,B,C) :- p1(A,_,_,B), p9(C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A,B,C) :- p3(A,B,C), p1(A,_,X,Y), p6(B,X), p6(B,Y).\np0(A,B,C) :- p1(A,_,B,_), p7(C).\np0(A,B,C) :- p1(A,_,_,B), p9(C).",
+      "llm_time_seconds": 507.668,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 576,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 8
+}

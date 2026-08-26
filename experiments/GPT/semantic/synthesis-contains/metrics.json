@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\synthesis-contains",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-05T16:03:46.340351",
+  "end_time": "2026-04-05T16:48:45.251103",
+  "total_time_seconds": 2698.911,
+  "pos_count": 20,
+  "neg_count": 20,
+  "bk_size_bytes": 1128,
+  "total_iterations": 1,
+  "total_prolog_tests": 4,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f(A):-head(A,6).\nf(A):-head(A,9).\nf(A):-tail(A,B),f(B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(A):-head(A,B),c_6(B).\nf(A):-head(A,B),c_9(B).\nf(A):-tail(A,C),f(C).",
+      "llm_time_seconds": 815.513,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 9
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 7
+}

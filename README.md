@@ -68,6 +68,7 @@ Run this from the repository root so that `cascade_popper` is importable as a pa
 ```
 cascade-popper/
 ├── requirements.txt
+├── experiments/             # recorded runs across Claude / Gemini / GPT (see its README)
 └── cascade_popper/          # the package — must stay a subdirectory of the repo root
     ├── app.py               # Streamlit UI and orchestration
     ├── loop.py              # main solve loop (CascadePopperLoop)

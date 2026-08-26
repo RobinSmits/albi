@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\robots-functional",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T19:49:13.193746",
+  "end_time": "2026-04-01T19:50:56.101495",
+  "total_time_seconds": 102.908,
+  "pos_count": 20,
+  "neg_count": 0,
+  "bk_size_bytes": 521,
+  "total_iterations": 1,
+  "total_prolog_tests": 4,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f(A,A) :- at_top(A).\nf(A,B) :- move_up(A,C), f(C,B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(A,A) :- at_top(A).\nf(A,B) :- move_up(A,C), f(C,B).",
+      "llm_time_seconds": 7.033,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 5
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 5
+}

@@ -1,0 +1,33 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\robots-linear",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T19:51:26.017166",
+  "end_time": "2026-04-01T19:52:34.508760",
+  "total_time_seconds": 68.492,
+  "pos_count": 1,
+  "neg_count": 7,
+  "bk_size_bytes": 403,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f(A, B) :- right(A, C), right(C, D), right(D, E), right(E, F), right(F, B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(A, B) :- right(A, C), right(C, D), right(D, E), right(E, F), right(F, B).",
+      "llm_time_seconds": 68.464,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 1,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

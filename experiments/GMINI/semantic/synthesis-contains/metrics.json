@@ -1,0 +1,52 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction\\full_context\\synthesis-contains",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T09:56:30.358110",
+  "end_time": "2026-03-14T10:10:02.549470",
+  "total_time_seconds": 812.191,
+  "pos_count": 20,
+  "neg_count": 20,
+  "bk_size_bytes": 1128,
+  "total_iterations": 2,
+  "total_prolog_tests": 6,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "f([A|_]) :- c_6(A).\nf([A|_]) :- c_9(A).\nf([_|T]) :- f(T).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f([A,B|_]) :- c_10(C), geq(C, B), geq(A, B), even(B).\nf([_|T]) :- f(T).",
+      "llm_time_seconds": 350.146,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "too_general",
+      "covered_pos": 20,
+      "covered_neg": 12,
+      "missed_pos": 0,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "f([A|_]) :- c_6(A).\nf([A|_]) :- c_9(A).\nf([_|T]) :- f(T).",
+      "llm_time_seconds": 281.991,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 3
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 3
+}

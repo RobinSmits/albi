@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction\\full_context\\synthesis-droplast",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T19:04:59.495923",
+  "end_time": "2026-03-14T19:08:41.839318",
+  "total_time_seconds": 222.343,
+  "pos_count": 10,
+  "neg_count": 11,
+  "bk_size_bytes": 161,
+  "total_iterations": 1,
+  "total_prolog_tests": 4,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f(A,B) :- tail(A,B), empty(B).\nf(A,B) :- append_(C,D,A), append_(C,E,B), f(D,E).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(A,B) :- tail(A,B), empty(B).\nf(A,B) :- head(A,C), tail(A,D), f(D,E), append_(C,E,B).",
+      "llm_time_seconds": 38.651,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 10,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 12
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 11
+}

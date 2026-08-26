@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\1d_pcopy_1c",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-03-31T19:56:51.498952",
+  "end_time": "2026-03-31T19:59:51.815277",
+  "total_time_seconds": 180.316,
+  "pos_count": 24,
+  "neg_count": 894,
+  "bk_size_bytes": 41289,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "out(A, B, C) :- in(A, B, C).\nout(A, B, C) :- in(A, D, C), my_succ(B, D), empty(A, B), my_succ(D, E), empty(A, E).\nout(A, B, C) :- in(A, D, C), my_succ(D, B), empty(A, B), my_succ(E, D), empty(A, E).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "out(A, B, C) :- in(A, B, C).\nout(A, B, C) :- in(A, D, C), my_succ(B, D), empty(A, B), my_succ(D, E), empty(A, E).\nout(A, B, C) :- in(A, D, C), my_succ(D, B), empty(A, B), my_succ(E, D), empty(A, E).",
+      "llm_time_seconds": 178.326,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 24,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 11
+}

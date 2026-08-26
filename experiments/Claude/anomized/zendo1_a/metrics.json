@@ -1,0 +1,33 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\zendo1_a",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-13T16:32:38.105187",
+  "end_time": "2026-04-13T16:38:13.002503",
+  "total_time_seconds": 334.897,
+  "pos_count": 20,
+  "neg_count": 20,
+  "bk_size_bytes": 10937,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(X) :- p1(X, Y), p8(Y), p2(Y, Z), p6(Z), p5(Z, V), p9(V).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(X) :- p1(X, Y), p8(Y), p2(Y, Z), p6(Z), p5(Z, V), p9(V).",
+      "llm_time_seconds": 334.322,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

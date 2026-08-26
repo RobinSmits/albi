@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\iggp-buttons-goal",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-03T01:06:15.084964",
+  "end_time": "2026-04-03T01:20:31.402838",
+  "total_time_seconds": 856.318,
+  "pos_count": 22,
+  "neg_count": 22,
+  "bk_size_bytes": 2988,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "goal(A,B,C) :- role(B), int_0(C), prop_q(Q), not_my_true(A,Q).\ngoal(A,B,C) :- role(B), int_0(C), prop_r(R), not_my_true(A,R).\ngoal(A,B,C) :- role(B), int_0(C), prop_p(P), not_my_true(A,P).\ngoal(A,B,C) :- role(B), int_100(C), prop_p(P), my_true(A,P), prop_q(Q), my_true(A,Q), prop_r(R), my_true(A,R).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "goal(A,B,C) :- role(B), int_0(C), prop_q(Q), not_my_true(A,Q).\ngoal(A,B,C) :- role(B), int_0(C), prop_r(R), not_my_true(A,R).\ngoal(A,B,C) :- role(B), int_0(C), prop_p(P), not_my_true(A,P).\ngoal(A,B,C) :- role(B), int_100(C), prop_p(P), my_true(A,P), prop_q(Q), my_true(A,Q), prop_r(R), my_true(A,R).",
+      "llm_time_seconds": 856.115,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 22,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 20
+}

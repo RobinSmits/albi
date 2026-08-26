@@ -1,0 +1,35 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\iggp-coins-next-cell",
+  "model": "claude-opus-4-6",
+  "strategy": "Batch Scalable (BBSILP)",
+  "start_time": "2026-04-15T21:47:49.404756",
+  "end_time": "2026-04-15T21:51:45.650991",
+  "total_time_seconds": 236.247,
+  "pos_count": 576,
+  "neg_count": 1968,
+  "bk_size_bytes": 13906,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A, B, C) :- p1(A, _, D, E), p6(B, D), p6(B, E), p3(A, B, C).\np0(A, B, C) :- p1(A, _, B, _), p7(C).\np0(A, B, C) :- p1(A, _, _, B), p9(C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A, B, C) :- p1(A, _, D, E), p6(B, D), p6(B, E), p3(A, B, C).\np0(A, B, C) :- p1(A, _, B, _), p7(C).\np0(A, B, C) :- p1(A, _, _, B), p9(C).",
+      "llm_time_seconds": 233.953,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 576,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 8
+}

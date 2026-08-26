@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\synthesis-droplast",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-05T18:31:18.103389",
+  "end_time": "2026-04-05T19:03:50.916036",
+  "total_time_seconds": 1952.813,
+  "pos_count": 10,
+  "neg_count": 11,
+  "bk_size_bytes": 161,
+  "total_iterations": 1,
+  "total_prolog_tests": 6,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f([_],[]).\nf([A|B],[A|C]):-f(B,C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(A,B):-head(A,C),append_(C,B,A),empty(B).\nf(A,B):-append_(C,D,A),f(D,E),append_(C,E,B).",
+      "llm_time_seconds": 639.621,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 10,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 14
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 3
+}

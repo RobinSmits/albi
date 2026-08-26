@@ -1,0 +1,18 @@
+{
+  "predicates": {
+    "p0": "grandparent",
+    "p1": "mother",
+    "p2": "father"
+  },
+  "constants": {
+    "c0": "enable_pi",
+    "c1": "ann",
+    "c2": "amy",
+    "c3": "andy",
+    "c4": "amelia",
+    "c5": "linda",
+    "c6": "gavin",
+    "c7": "steve",
+    "c8": "spongebob"
+  }
+}

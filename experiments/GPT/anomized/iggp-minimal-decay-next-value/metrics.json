@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\iggp-minimal-decay-next-value",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-08T21:27:07.724978",
+  "end_time": "2026-04-08T21:34:50.840290",
+  "total_time_seconds": 463.115,
+  "pos_count": 8,
+  "neg_count": 46,
+  "bk_size_bytes": 286,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A,B) :- p1(A,_,C), p4(C), p11(B).\np0(A,B) :- p1(A,_,C), p5(C), p2(A,D), p3(B,D).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A,B) :- p1(A,_,C), p4(C), p11(B).\np0(A,B) :- p1(A,_,C), p5(C), p2(A,D), p3(B,D).",
+      "llm_time_seconds": 462.549,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 8,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 7
+}

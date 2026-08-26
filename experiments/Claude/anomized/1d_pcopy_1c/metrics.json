@@ -1,0 +1,35 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\1d_pcopy_1c",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-23T12:31:48.681738",
+  "end_time": "2026-04-23T12:34:32.144599",
+  "total_time_seconds": 163.463,
+  "pos_count": 24,
+  "neg_count": 894,
+  "bk_size_bytes": 28204,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p1(A,B,C) :- p2(A,B,C).\np1(A,B,C) :- p6(A,B), p3(B,D), p2(A,D,C), p3(D,E), p6(A,E).\np1(A,B,C) :- p6(A,B), p3(D,B), p2(A,D,C), p3(E,D), p6(A,E).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p1(A,B,C) :- p2(A,B,C).\np1(A,B,C) :- p6(A,B), p3(B,D), p2(A,D,C), p3(D,E), p6(A,E).\np1(A,B,C) :- p6(A,B), p3(D,B), p2(A,D,C), p3(E,D), p6(A,E).",
+      "llm_time_seconds": 162.146,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 24,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 11
+}

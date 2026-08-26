@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction\\full_context\\iggp-minimal-decay-next-value",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T09:43:06.969834",
+  "end_time": "2026-03-14T09:43:38.351486",
+  "total_time_seconds": 31.382,
+  "pos_count": 8,
+  "neg_count": 46,
+  "bk_size_bytes": 510,
+  "total_iterations": 1,
+  "total_prolog_tests": 4,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "next_value(A, B) :- does(A, _, C), press_button(C), c5(B).\nnext_value(A, B) :- does(A, _, C), noop(C), true_value(A, D), my_succ(B, D).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "next_value(A, B) :- does(A, _, C), press_button(C), c5(B).\nnext_value(A, B) :- does(A, _, C), noop(C), true_value(A, D), my_succ(B, D).",
+      "llm_time_seconds": 30.936,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.001,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 2,
+      "result": "solution_found_dc",
+      "covered_pos": 8,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 7
+}

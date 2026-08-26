@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction\\full_context\\iggp-coins-goal",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T09:17:10.341320",
+  "end_time": "2026-03-14T09:18:56.981796",
+  "total_time_seconds": 106.64,
+  "pos_count": 62,
+  "neg_count": 62,
+  "bk_size_bytes": 18116,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "goal(A, B, C) :- role(B), score_0(C), my_true_step(A, D), pos_5(E), different(D, E).\ngoal(A, B, C) :- role(B), score_100(C), my_true_step(A, D), pos_5(D).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "goal(A, B, C) :- role(B), score_0(C), my_true_step(A, D), pos_5(E), different(D, E).\ngoal(A, B, C) :- role(B), score_100(C), my_true_step(A, D), pos_5(D).",
+      "llm_time_seconds": 105.329,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 62,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 9
+}

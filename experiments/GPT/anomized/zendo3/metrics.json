@@ -1,0 +1,48 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\zendo3",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-13T07:43:23.639316",
+  "end_time": "2026-04-13T08:30:17.950401",
+  "total_time_seconds": 2814.311,
+  "pos_count": 50,
+  "neg_count": 50,
+  "bk_size_bytes": 29404,
+  "total_iterations": 2,
+  "total_prolog_tests": 8,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "p0(A) :- p1(A,B), p1(A,C), p2(B,C), p6(B), \\+ (p7(C), p5(B,D), p9(D)), \\+ (p7(C), p5(B,E), p10(E)).\np0(A) :- p1(A,B), p1(A,C), p6(B), p8(C), p3(B,D), p3(C,D).\np0(A) :- p1(A,B), p1(A,C), p2(B,C), p7(B), p8(C), p5(B,D), p11(D).\np0(A) :- p1(A,B), p1(A,C), p2(B,C), p8(B), p8(C).\np0(A) :- p1(A,B), p2(B,C), p14(B), p15(C), \\+ p8(B), \\+ p8(C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A) :- p1(A,B), p1(A,C), p6(B), p8(C), p3(B,D), p3(C,D).\np0(A) :- p1(A,B), p1(A,C), p2(B,C), p6(B), \\+ (p7(C), p5(B,D), p9(D)), \\+ (p7(C), p5(B,E), p10(E)).\np0(A) :- p1(A,B), p1(A,C), p2(B,C), p7(B), p8(C), p5(B,D), p11(D).\np0(A) :- p1(A,B), p1(A,C), p2(B,C), p8(B), p8(C).",
+      "llm_time_seconds": 1437.777,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 49,
+      "covered_neg": 0,
+      "missed_pos": 1,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "p0(A) :- p1(A,B), p1(A,C), p2(B,C), p6(B), \\+ (p7(C), p5(B,D), p9(D)), \\+ (p7(C), p5(B,E), p10(E)).\np0(A) :- p1(A,B), p1(A,C), p6(B), p8(C), p3(B,D), p3(C,D).\np0(A) :- p1(A,B), p1(A,C), p2(B,C), p7(B), p8(C), p5(B,D), p11(D).\np0(A) :- p1(A,B), p1(A,C), p2(B,C), p8(B), p8(C).\np0(A) :- p1(A,B), p2(B,C), p14(B), p15(C), \\+ p8(B), \\+ p8(C).",
+      "llm_time_seconds": 1369.986,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 50,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

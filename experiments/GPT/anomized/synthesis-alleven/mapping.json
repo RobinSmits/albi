@@ -1,0 +1,18 @@
+{
+  "predicates": {
+    "p0": "f",
+    "p1": "tail",
+    "p2": "head",
+    "p3": "last",
+    "p4": "empty",
+    "p5": "zero",
+    "p6": "even"
+  },
+  "constants": {
+    "c0": "enable_recursion",
+    "c1": "list",
+    "c2": "element",
+    "c3": "in",
+    "c4": "out"
+  }
+}

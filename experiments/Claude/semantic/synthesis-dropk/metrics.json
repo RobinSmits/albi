@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\synthesis-dropk",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T20:22:23.684279",
+  "end_time": "2026-04-01T20:24:43.689997",
+  "total_time_seconds": 140.006,
+  "pos_count": 10,
+  "neg_count": 10,
+  "bk_size_bytes": 262,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f(A, B, A) :- zero(B).\nf(A, B, C) :- tail(A, D), decrement(B, E), f(D, E, C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(A, B, A) :- zero(B).\nf(A, B, C) :- tail(A, D), decrement(B, E), f(D, E, C).",
+      "llm_time_seconds": 24.131,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 10,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 8
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 8
+}

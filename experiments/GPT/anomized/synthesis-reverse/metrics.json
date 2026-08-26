@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\synthesis-reverse",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-12T11:06:11.592768",
+  "end_time": "2026-04-12T11:37:07.716163",
+  "total_time_seconds": 1856.123,
+  "pos_count": 4,
+  "neg_count": 5,
+  "bk_size_bytes": 187,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A,[B|_]):- p3(_,B,A).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A,A):- p4(A).\np0(A,B):- p1(A,C), p2(A,D), p0(D,E), p3(E,C,B).",
+      "llm_time_seconds": 546.554,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 4,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 10
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 3
+}

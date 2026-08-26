@@ -1,0 +1,52 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\synthesis-dropk",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-15T00:16:45.382980",
+  "end_time": "2026-04-15T00:23:01.506025",
+  "total_time_seconds": 376.123,
+  "pos_count": 10,
+  "neg_count": 10,
+  "bk_size_bytes": 257,
+  "total_iterations": 2,
+  "total_prolog_tests": 6,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "p0(A, B, A) :- p11(B).\np0(A, B, C) :- p2(A, D), p0(D, E, C), p4(E, B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A, B, A) :- p11(B).\np0(A, B, C) :- p2(A, D), p5(B, E), p0(D, E, C).",
+      "llm_time_seconds": 23.008,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "too_specific",
+      "covered_pos": 0,
+      "covered_neg": 0,
+      "missed_pos": 10,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "p0(A, B, A) :- p11(B).\np0(A, B, C) :- p2(A, D), p0(D, E, C), p4(E, B).",
+      "llm_time_seconds": 160.483,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 10,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 8
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 8
+}

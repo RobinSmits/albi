@@ -1,0 +1,17 @@
+{
+  "task_dir": "F:\\datasetforan\\GMINI\\anomized\\andersen",
+  "model": "gemini-3.1-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-04-27T16:44:59.894931",
+  "end_time": "2026-04-27T16:46:44.327545",
+  "total_time_seconds": 104.433,
+  "pos_count": 7,
+  "neg_count": 0,
+  "bk_size_bytes": 76,
+  "total_iterations": 0,
+  "total_prolog_tests": 4,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(_, B) :- p1(_, B).",
+  "iterations": []
+}

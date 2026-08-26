@@ -1,0 +1,63 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\iggp-gt_centipede-goal",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-03T17:08:51.604396",
+  "end_time": "2026-04-03T17:51:54.477185",
+  "total_time_seconds": 2582.873,
+  "pos_count": 20,
+  "neg_count": 400,
+  "bk_size_bytes": 1729,
+  "total_iterations": 3,
+  "total_prolog_tests": 11,
+  "total_subsumption_checks": 3,
+  "solved": true,
+  "solution": "goal(E,A,0) :- role(A), true_control(E,black), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(W,X), succ(X,Y), succ(Y,B).\ngoal(E,A,0) :- role(A), true_control(E,white), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(B,W).\ngoal(E,black,B) :- true_control(E,white), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(W,X), succ(X,Y), succ(Y,B).\ngoal(E,white,W) :- true_control(E,white), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(W,X), succ(X,Y), succ(Y,B).\ngoal(E,black,B) :- true_control(E,black), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(B,W).\ngoal(E,white,W) :- true_control(E,black), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(B,W).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "goal(E,A,0) :- role(A), true_control(E,white), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(B,W).\ngoal(E,A,0) :- role(A), true_control(E,black), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(W,X), succ(X,Y), succ(Y,B).\ngoal(E,black,B) :- true_control(E,white), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(W,X), succ(X,Y), succ(Y,B).\ngoal(E,white,W) :- true_control(E,white), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(W,X), succ(X,Y), succ(Y,B).",
+      "llm_time_seconds": 565.476,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.001,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 16,
+      "covered_neg": 0,
+      "missed_pos": 4,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "goal(E,black,B) :- true_control(E,black), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(B,W).",
+      "llm_time_seconds": 464.87,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 2,
+      "covered_neg": 0,
+      "missed_pos": 18,
+      "is_complete": false
+    },
+    {
+      "iteration": 3,
+      "hypothesis": "goal(E,A,0) :- role(A), true_control(E,black), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(W,X), succ(X,Y), succ(Y,B).\ngoal(E,A,0) :- role(A), true_control(E,white), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(B,W).\ngoal(E,black,B) :- true_control(E,white), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(W,X), succ(X,Y), succ(Y,B).\ngoal(E,white,W) :- true_control(E,white), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(W,X), succ(X,Y), succ(Y,B).\ngoal(E,black,B) :- true_control(E,black), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(B,W).\ngoal(E,white,W) :- true_control(E,black), true_blackPayoff(E,B), true_whitePayoff(E,W), succ(B,W).",
+      "llm_time_seconds": 1550.064,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

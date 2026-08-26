@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\synthesis-alleven",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-04T22:43:42.896289",
+  "end_time": "2026-04-04T23:25:21.997264",
+  "total_time_seconds": 2499.101,
+  "pos_count": 4,
+  "neg_count": 5,
+  "bk_size_bytes": 77,
+  "total_iterations": 1,
+  "total_prolog_tests": 4,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f([]).\nf([A|B]) :- even(A), f(B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(A) :- empty(A).\nf(A) :- head(A,B), even(B), tail(A,C), f(C).",
+      "llm_time_seconds": 501.501,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 4,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 7
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 3
+}

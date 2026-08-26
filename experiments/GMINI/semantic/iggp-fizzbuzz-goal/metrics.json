@@ -1,0 +1,48 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction\\full_context\\iggp-fizzbuzz-goal",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T09:19:43.453964",
+  "end_time": "2026-03-14T09:23:43.927840",
+  "total_time_seconds": 240.474,
+  "pos_count": 164,
+  "neg_count": 656,
+  "bk_size_bytes": 29416,
+  "total_iterations": 2,
+  "total_prolog_tests": 8,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "goal(A, B, C) :- true_success(A, D), int_15(E), less_than(D, E), score_0(C), role(B).\ngoal(A, B, C) :- true_success(A, D), int_15(D), score_25(C), role(B).\ngoal(A, B, C) :- true_success(A, D), int_20(D), score_50(C), role(B).\ngoal(A, B, C) :- true_success(A, D), int_26(D), score_75(C), role(B).\ngoal(A, B, C) :- true_success(A, D), int_30(D), score_100(C), role(B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "goal(A, B, C) :- true_success(A, D), int_15(E), less_than(D, E), score_0(C), role(B).\ngoal(A, B, C) :- true_success(A, D), int_15(D), score_25(C), role(B).\ngoal(A, B, C) :- true_success(A, D), int_20(D), score_50(C), role(B).\ngoal(A, B, C) :- true_success(A, D), int_26(D), score_75(C), role(B).",
+      "llm_time_seconds": 155.798,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 163,
+      "covered_neg": 0,
+      "missed_pos": 1,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "goal(A, B, C) :- true_success(A, D), int_15(E), less_than(D, E), score_0(C), role(B).\ngoal(A, B, C) :- true_success(A, D), int_15(D), score_25(C), role(B).\ngoal(A, B, C) :- true_success(A, D), int_20(D), score_50(C), role(B).\ngoal(A, B, C) :- true_success(A, D), int_26(D), score_75(C), role(B).\ngoal(A, B, C) :- true_success(A, D), int_30(D), score_100(C), role(B).",
+      "llm_time_seconds": 81.282,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 164,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

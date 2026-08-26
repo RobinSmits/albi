@@ -1,0 +1,22 @@
+{
+  "predicates": {
+    "p0": "f",
+    "p1": "up",
+    "p2": "down",
+    "p3": "left",
+    "p4": "right",
+    "p5": "use_module",
+    "p6": "library",
+    "p7": "size",
+    "p8": "at_left",
+    "p9": "w",
+    "p10": "at_bottom",
+    "p11": "at_top",
+    "p12": "at_right"
+  },
+  "constants": {
+    "c0": "in",
+    "c1": "out",
+    "c2": "clpfd"
+  }
+}

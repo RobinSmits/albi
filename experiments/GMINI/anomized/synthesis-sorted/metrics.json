@@ -1,0 +1,37 @@
+{
+  "task_dir": "F:\\datasetforan\\GMINI\\anomized\\synthesis-sorted",
+  "model": "gemini-3.1-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-04-27T16:31:40.155174",
+  "end_time": "2026-04-27T16:37:00.707859",
+  "total_time_seconds": 320.553,
+  "pos_count": 10,
+  "neg_count": 10,
+  "bk_size_bytes": 57988,
+  "total_iterations": 1,
+  "total_prolog_tests": 6,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A) :- p2(A,B), p2(B,C), p6(C).\np0(A) :- p1(A,C), p2(A,B), p1(B,D), p5(D,C), p0(B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A) :- p2(A,B), p2(B,C), p6(C).\np0(A) :- p1(A,C), p2(A,B), p1(B,D), p5(D,C), p0(B).",
+      "llm_time_seconds": 144.929,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 10,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 14
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 14
+}

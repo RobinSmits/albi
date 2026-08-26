@@ -1,0 +1,33 @@
+{
+  "task_dir": "F:\\datasetforan\\GMINI\\anomized\\zendo1",
+  "model": "gemini-3.1-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-04-24T20:25:21.081838",
+  "end_time": "2026-04-24T20:29:50.658620",
+  "total_time_seconds": 269.577,
+  "pos_count": 20,
+  "neg_count": 20,
+  "bk_size_bytes": 10948,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A) :- p1(A, B), p8(B), p2(B, C), p5(C, D), p9(D).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A) :- p1(A, B), p8(B), p2(B, C), p5(C, D), p9(D).",
+      "llm_time_seconds": 269.085,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

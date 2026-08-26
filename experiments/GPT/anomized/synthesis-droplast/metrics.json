@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\synthesis-droplast",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-11T19:09:53.893192",
+  "end_time": "2026-04-11T19:36:39.582574",
+  "total_time_seconds": 1605.689,
+  "pos_count": 10,
+  "neg_count": 11,
+  "bk_size_bytes": 192,
+  "total_iterations": 1,
+  "total_prolog_tests": 6,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A,B):-p10(B,[_],A).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A,B):-p2(A,B),p3(B).\np0(A,B):-p1(A,C),p2(A,D),p0(D,E),p8(C,E,B).",
+      "llm_time_seconds": 653.022,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 10,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 12
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 3
+}

@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\iggp-rps-next-score",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T19:40:43.828479",
+  "end_time": "2026-04-01T19:41:45.916323",
+  "total_time_seconds": 62.088,
+  "pos_count": 108,
+  "neg_count": 356,
+  "bk_size_bytes": 6356,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "next_score(Ex, P, S) :- does(Ex, P, A), does(Ex, Q, A), different(P, Q), my_true_score(Ex, P, S).\nnext_score(Ex, P, S2) :- does(Ex, P, A), does(Ex, Q, B), different(P, Q), beats(A, B), my_true_score(Ex, P, S1), my_succ(S1, S2).\nnext_score(Ex, P, S) :- does(Ex, P, A), does(Ex, Q, B), different(P, Q), beats(B, A), my_true_score(Ex, P, S).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "next_score(Ex, P, S) :- does(Ex, P, A), does(Ex, Q, A), different(P, Q), my_true_score(Ex, P, S).\nnext_score(Ex, P, S2) :- does(Ex, P, A), does(Ex, Q, B), different(P, Q), beats(A, B), my_true_score(Ex, P, S1), my_succ(S1, S2).\nnext_score(Ex, P, S) :- does(Ex, P, A), does(Ex, Q, B), different(P, Q), beats(B, A), my_true_score(Ex, P, S).",
+      "llm_time_seconds": 61.454,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 108,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 15
+}

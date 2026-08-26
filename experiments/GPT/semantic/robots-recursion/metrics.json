@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\semantic\\full_context\\robots-recursion",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-04T22:14:17.683870",
+  "end_time": "2026-04-04T22:43:11.324612",
+  "total_time_seconds": 1733.641,
+  "pos_count": 20,
+  "neg_count": 21,
+  "bk_size_bytes": 423,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f(w(X,Y),w(X,100)).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(A,A):- at_top(A).\nf(A,B):- move_up(A,C), f(C,B).",
+      "llm_time_seconds": 757.786,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 5
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 1
+}

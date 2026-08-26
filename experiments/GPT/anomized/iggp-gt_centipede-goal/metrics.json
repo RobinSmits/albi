@@ -1,0 +1,63 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\iggp-gt_centipede-goal",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-08T20:01:45.233567",
+  "end_time": "2026-04-08T21:04:40.403009",
+  "total_time_seconds": 3775.17,
+  "pos_count": 20,
+  "neg_count": 400,
+  "bk_size_bytes": 1080,
+  "total_iterations": 3,
+  "total_prolog_tests": 11,
+  "total_subsumption_checks": 3,
+  "solved": true,
+  "solution": "p1(X,c37,0):-p4(X,c37).\np1(X,c37,Z):-p4(X,c36),p3(X,A),p6(A,Z),p2(X,Z).\np1(X,c36,Z):-p4(X,c36),p3(X,Z),p6(Z,A),p2(X,A).\np1(X,c36,Z):-p4(X,c37),p2(X,A),p6(A,B),p6(B,C),p6(C,Z),p3(X,Z).\np1(X,c36,0):-p4(X,_),\\+ (p4(X,c37),p2(X,A),p6(A,B),p6(B,C),p6(C,D),p3(X,D)),\\+ (p4(X,c36),p3(X,E),p6(E,F),p2(X,F),p6(_,E)).\np1(X,c37,0):-p4(X,c36),p3(X,A),p2(X,B),\\+ p6(A,B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p1(X,c37,Z):-p4(X,c36),p3(X,A),p6(A,Z),p2(X,Z).\np1(X,c36,Z):-p4(X,c36),p3(X,Z),p6(Z,A),p2(X,A).\np1(X,c36,Z):-p4(X,c37),p2(X,A),p6(A,B),p6(B,C),p6(C,Z),p3(X,Z).\np1(X,c37,0):-p4(X,c37).",
+      "llm_time_seconds": 1007.481,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 9,
+      "covered_neg": 0,
+      "missed_pos": 11,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "p1(X,c36,0):-p4(X,_),\\+ (p4(X,c37),p2(X,A),p6(A,B),p6(B,C),p6(C,D),p3(X,D)),\\+ (p4(X,c36),p3(X,E),p6(E,F),p2(X,F),p6(_,E)).",
+      "llm_time_seconds": 755.661,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 8,
+      "covered_neg": 0,
+      "missed_pos": 12,
+      "is_complete": false
+    },
+    {
+      "iteration": 3,
+      "hypothesis": "p1(X,c37,0):-p4(X,c37).\np1(X,c37,Z):-p4(X,c36),p3(X,A),p6(A,Z),p2(X,Z).\np1(X,c36,Z):-p4(X,c36),p3(X,Z),p6(Z,A),p2(X,A).\np1(X,c36,Z):-p4(X,c37),p2(X,A),p6(A,B),p6(B,C),p6(C,Z),p3(X,Z).\np1(X,c36,0):-p4(X,_),\\+ (p4(X,c37),p2(X,A),p6(A,B),p6(B,C),p6(C,D),p3(X,D)),\\+ (p4(X,c36),p3(X,E),p6(E,F),p2(X,F),p6(_,E)).\np1(X,c37,0):-p4(X,c36),p3(X,A),p2(X,B),\\+ p6(A,B).",
+      "llm_time_seconds": 2009.408,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 20,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

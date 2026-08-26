@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Users\\admin\\Desktop\\larg\\2\\cadcadefile\\example_abstraction\\full_context\\iggp-buttons-goal",
+  "model": "gemini-3-pro-preview",
+  "strategy": "Full Context",
+  "start_time": "2026-03-14T08:46:09.956195",
+  "end_time": "2026-03-14T08:47:13.740866",
+  "total_time_seconds": 63.785,
+  "pos_count": 22,
+  "neg_count": 22,
+  "bk_size_bytes": 2988,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "goal(A, _, C) :- int_0(C), not_my_true(A, _).\ngoal(A, _, C) :- int_100(C), prop_p(P), my_true(A, P), prop_q(Q), my_true(A, Q), prop_r(R), my_true(A, R).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "goal(A, _, C) :- int_0(C), not_my_true(A, _).\ngoal(A, _, C) :- int_100(C), prop_p(P), my_true(A, P), prop_q(Q), my_true(A, Q), prop_r(R), my_true(A, R).",
+      "llm_time_seconds": 63.33,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 22,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 9
+}

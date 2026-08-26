@@ -1,0 +1,35 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\iggp-rps-next-score",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-15T18:19:18.726805",
+  "end_time": "2026-04-15T18:32:00.786149",
+  "total_time_seconds": 762.059,
+  "pos_count": 108,
+  "neg_count": 356,
+  "bk_size_bytes": 3759,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(X, Y, Z) :- p1(X, Y, Z), p3(X, Y, V), p6(Y, Y2), p3(X, Y2, V).\np0(X, Y, Z) :- p1(X, Y, A), p2(A, Z), p3(X, Y, V), p6(Y, Y2), p3(X, Y2, W), p4(V, W).\np0(X, Y, Z) :- p1(X, Y, Z), p3(X, Y, V), p6(Y, Y2), p3(X, Y2, W), p4(W, V).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(X, Y, Z) :- p1(X, Y, Z), p3(X, Y, V), p6(Y, Y2), p3(X, Y2, V).\np0(X, Y, Z) :- p1(X, Y, A), p2(A, Z), p3(X, Y, V), p6(Y, Y2), p3(X, Y2, W), p4(V, W).\np0(X, Y, Z) :- p1(X, Y, Z), p3(X, Y, V), p6(Y, Y2), p3(X, Y2, W), p4(W, V).",
+      "llm_time_seconds": 761.199,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 108,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 15
+}

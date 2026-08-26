@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\synthesis-filter",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T20:27:25.718254",
+  "end_time": "2026-04-01T20:30:26.016408",
+  "total_time_seconds": 180.298,
+  "pos_count": 5,
+  "neg_count": 5,
+  "bk_size_bytes": 395,
+  "total_iterations": 1,
+  "total_prolog_tests": 6,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "f(V0,V1):- empty(V0), empty(V1).\nf(V0,V1):- head(V0,V2), tail(V0,V3), odd(V2), f(V3,V1).\nf(V0,V1):- head(V0,V2), tail(V0,V3), even(V2), f(V3,V4), prepend(V2,V4,V1).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "f(V0,V1):- empty(V0), empty(V1).\nf(V0,V1):- head(V0,V2), tail(V0,V3), odd(V2), f(V3,V1).\nf(V0,V1):- head(V0,V2), tail(V0,V3), even(V2), f(V3,V4), prepend(V2,V4,V1).",
+      "llm_time_seconds": 9.014,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 5,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 19
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 19
+}

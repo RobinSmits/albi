@@ -1,0 +1,52 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\synthesis-filter",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-11T22:38:16.182918",
+  "end_time": "2026-04-11T23:28:45.802735",
+  "total_time_seconds": 3029.62,
+  "pos_count": 5,
+  "neg_count": 5,
+  "bk_size_bytes": 364,
+  "total_iterations": 2,
+  "total_prolog_tests": 9,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "p0([],[]).\np0([A|B],C):- p2(A), p0(B,C).\np0([A|B],[A|C]):- p3(A), p0(B,C).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A,B):- p1(A), p1(B).\np0(A,B):- p5(A,C), p4(A,D), p2(D), p0(C,B).\np0(A,B):- p4(A,D), p5(A,C), p3(D), p0(C,E), p6(D,E,B).",
+      "llm_time_seconds": 557.416,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "too_specific",
+      "covered_pos": 0,
+      "covered_neg": 0,
+      "missed_pos": 5,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "p0(A,B):- p1(A), p1(B).\np0(A,B):- p4(A,C), p2(C), p5(A,D), p0(D,B).\np0(A,B):- p4(A,C), p3(C), p4(B,C), p5(A,D), p5(B,E), p0(D,E).",
+      "llm_time_seconds": 460.785,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.001,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 5,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 20
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 7
+}

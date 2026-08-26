@@ -1,0 +1,35 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\iggp-gt_centipede-legal",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-08T21:05:27.277205",
+  "end_time": "2026-04-08T21:15:01.028595",
+  "total_time_seconds": 573.751,
+  "pos_count": 30,
+  "neg_count": 30,
+  "bk_size_bytes": 1082,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p1(A,B,c33) :- p4(A,B).\np1(A,B,c34) :- p4(A,B).\np1(A,c36,c35) :- p4(A,c37).\np1(A,c37,c35) :- p4(A,c36).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p1(A,B,c33) :- p4(A,B).\np1(A,B,c34) :- p4(A,B).\np1(A,c36,c35) :- p4(A,c37).\np1(A,c37,c35) :- p4(A,c36).",
+      "llm_time_seconds": 573.06,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 30,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 4
+}

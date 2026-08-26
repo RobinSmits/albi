@@ -1,0 +1,48 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\zendo3",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T21:59:51.553115",
+  "end_time": "2026-04-01T22:13:42.905062",
+  "total_time_seconds": 831.352,
+  "pos_count": 50,
+  "neg_count": 50,
+  "bk_size_bytes": 39325,
+  "total_iterations": 2,
+  "total_prolog_tests": 8,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "zendo(S) :- piece(S, P), piece(S, Q), contact(P, Q), blue(P), size(P, V), large(V).\nzendo(S) :- piece(S, P), piece(S, Q), coord1(P, X), coord1(Q, X), blue(P), red(Q).\nzendo(S) :- piece(S, P), piece(S, Q), contact(P, Q), red(P), red(Q).\nzendo(S) :- piece(S, P), piece(S, Q), contact(P, Q), green(P), green(Q), coord2(P, Y), large(Y).\nzendo(S) :- piece(S, P), piece(S, Q), contact(P, Q), size(P, V), large(V), rhs(Q).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "zendo(S) :- piece(S, P), piece(S, Q), coord1(P, X), coord1(Q, X), blue(P), red(Q).\nzendo(S) :- piece(S, P), piece(S, Q), contact(P, Q), blue(P), size(P, V), large(V).\nzendo(S) :- piece(S, P), piece(S, Q), contact(P, Q), red(P), red(Q).\nzendo(S) :- piece(S, P), piece(S, Q), contact(P, Q), green(P), green(Q), coord2(P, Y), large(Y).",
+      "llm_time_seconds": 557.296,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 46,
+      "covered_neg": 0,
+      "missed_pos": 4,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "zendo(S) :- piece(S, P), piece(S, Q), contact(P, Q), blue(P), size(P, V), large(V).\nzendo(S) :- piece(S, P), piece(S, Q), coord1(P, X), coord1(Q, X), blue(P), red(Q).\nzendo(S) :- piece(S, P), piece(S, Q), contact(P, Q), red(P), red(Q).\nzendo(S) :- piece(S, P), piece(S, Q), contact(P, Q), green(P), green(Q), coord2(P, Y), large(Y).\nzendo(S) :- piece(S, P), piece(S, Q), contact(P, Q), size(P, V), large(V), rhs(Q).",
+      "llm_time_seconds": 269.985,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 50,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

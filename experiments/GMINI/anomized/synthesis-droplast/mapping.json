@@ -1,0 +1,22 @@
+{
+  "predicates": {
+    "p0": "f",
+    "p1": "head",
+    "p2": "tail",
+    "p3": "empty",
+    "p4": "even",
+    "p5": "odd",
+    "p6": "one",
+    "p7": "zero",
+    "p8": "append_",
+    "p9": "sum",
+    "p10": "append"
+  },
+  "constants": {
+    "c0": "enable_recursion",
+    "c1": "list",
+    "c2": "element",
+    "c3": "in",
+    "c4": "out"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "task_dir": "F:\\datasetforan\\GPT\\semantic\\full_context\\andersen",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-24T22:39:55.245024",
+  "end_time": "2026-04-24T23:28:47.395563",
+  "total_time_seconds": 2932.151,
+  "pos_count": 7,
+  "neg_count": 0,
+  "bk_size_bytes": 94,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "pt(A,B):-addr(A,B).\npt(A,B):-pt(C,B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "pt(A,B):-addr(A,B).\npt(A,B):-assgn(A,C),pt(C,B).\npt(C,B):-store(A,D),pt(A,C),pt(D,B).\npt(A,B):-load(A,C),pt(C,D),pt(D,B).",
+      "llm_time_seconds": 645.786,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.001,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 7,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 18
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 4
+}

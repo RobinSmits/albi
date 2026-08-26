@@ -1,0 +1,48 @@
+{
+  "task_dir": "C:\\Projects\\Claude\\semantic\\full_context\\iggp-fizzbuzz-goal",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-01T19:07:55.372141",
+  "end_time": "2026-04-01T19:12:39.322691",
+  "total_time_seconds": 283.951,
+  "pos_count": 164,
+  "neg_count": 656,
+  "bk_size_bytes": 29416,
+  "total_iterations": 2,
+  "total_prolog_tests": 8,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "goal(Ex, Agent, 0) :- true_success(Ex, S), less_than(S, 15), role(Agent).\ngoal(Ex, Agent, 25) :- true_success(Ex, S), less_than(14, S), less_than(S, 20), role(Agent).\ngoal(Ex, Agent, 50) :- true_success(Ex, S), less_than(19, S), less_than(S, 26), role(Agent).\ngoal(Ex, Agent, 75) :- true_success(Ex, S), less_than(25, S), less_than(S, 30), role(Agent).\ngoal(Ex, Agent, 100) :- true_success(Ex, S), less_than(29, S), role(Agent).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "goal(Ex, Agent, 0) :- true_success(Ex, S), less_than(S, 15), role(Agent).\ngoal(Ex, Agent, 25) :- true_success(Ex, S), less_than(14, S), less_than(S, 20), role(Agent).\ngoal(Ex, Agent, 50) :- true_success(Ex, S), less_than(19, S), less_than(S, 26), role(Agent).\ngoal(Ex, Agent, 75) :- true_success(Ex, S), less_than(25, S), less_than(S, 30), role(Agent).",
+      "llm_time_seconds": 213.896,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "partial_cover",
+      "covered_pos": 163,
+      "covered_neg": 0,
+      "missed_pos": 1,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "goal(Ex, Agent, 0) :- true_success(Ex, S), less_than(S, 15), role(Agent).\ngoal(Ex, Agent, 25) :- true_success(Ex, S), less_than(14, S), less_than(S, 20), role(Agent).\ngoal(Ex, Agent, 50) :- true_success(Ex, S), less_than(19, S), less_than(S, 26), role(Agent).\ngoal(Ex, Agent, 75) :- true_success(Ex, S), less_than(25, S), less_than(S, 30), role(Agent).\ngoal(Ex, Agent, 100) :- true_success(Ex, S), less_than(29, S), role(Agent).",
+      "llm_time_seconds": 66.829,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 164,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

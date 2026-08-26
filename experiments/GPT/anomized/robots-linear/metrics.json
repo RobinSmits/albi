@@ -1,0 +1,33 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\robots-linear",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-09T19:02:40.839640",
+  "end_time": "2026-04-09T19:16:56.898351",
+  "total_time_seconds": 856.059,
+  "pos_count": 1,
+  "neg_count": 7,
+  "bk_size_bytes": 379,
+  "total_iterations": 1,
+  "total_prolog_tests": 5,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0(A,B):-p4(A,C),p4(C,D),p4(D,E),p4(E,F),p4(F,B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A,B):-p4(A,C),p4(C,D),p4(D,E),p4(E,F),p4(F,B).",
+      "llm_time_seconds": 855.14,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 1,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

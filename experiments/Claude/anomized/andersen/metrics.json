@@ -1,0 +1,48 @@
+{
+  "task_dir": "F:\\dataset\\Claude\\anomized\\full_context\\andersen",
+  "model": "claude-opus-4-6",
+  "strategy": "Full Context",
+  "start_time": "2026-04-23T13:16:25.087158",
+  "end_time": "2026-04-23T13:20:55.802259",
+  "total_time_seconds": 270.715,
+  "pos_count": 7,
+  "neg_count": 0,
+  "bk_size_bytes": 76,
+  "total_iterations": 2,
+  "total_prolog_tests": 8,
+  "total_subsumption_checks": 2,
+  "solved": true,
+  "solution": "p0(X,Y) :- p1(X,Y).\np0(X,Y) :- p2(X,Z), p0(Z,Y).\np0(X,Y) :- p3(X,Z), p0(Z,Y).\np0(X,Y) :- p4(X,Z), p0(Z,Y).\np0(X, Y) :- p1(_, X), p1(_, Y).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(X,Y) :- p1(X,Y).\np0(X,Y) :- p2(X,Z), p0(Z,Y).\np0(X,Y) :- p3(X,Z), p0(Z,Y).\np0(X,Y) :- p4(X,Z), p0(Z,Y).",
+      "llm_time_seconds": 179.692,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "recursive_partial_cover",
+      "covered_pos": 6,
+      "covered_neg": 0,
+      "missed_pos": 1,
+      "is_complete": false
+    },
+    {
+      "iteration": 2,
+      "hypothesis": "p0(X,Y) :- p1(X,Y).\np0(X,Y) :- p2(X,Z), p0(Z,Y).\np0(X,Y) :- p3(X,Z), p0(Z,Y).\np0(X,Y) :- p4(X,Z), p0(Z,Y).\np0(X, Y) :- p1(_, X), p1(_, Y).",
+      "llm_time_seconds": 89.969,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution_found_dc",
+      "covered_pos": 7,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true
+    }
+  ]
+}

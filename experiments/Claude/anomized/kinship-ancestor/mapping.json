@@ -1,0 +1,22 @@
+{
+  "predicates": {
+    "p0": "ancestor",
+    "p1": "father",
+    "p2": "mother"
+  },
+  "constants": {
+    "c0": "enable_recursion",
+    "c1": "queen_victoria",
+    "c2": "edward_seventh",
+    "c3": "queen_mother",
+    "c4": "elizabeth_second",
+    "c5": "prince_charles",
+    "c6": "princess_diana",
+    "c7": "prince_william",
+    "c8": "prince_harry",
+    "c9": "george_fifth",
+    "c10": "george_sixth",
+    "c11": "prince_philip",
+    "c12": "prince_george"
+  }
+}

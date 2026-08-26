@@ -1,0 +1,37 @@
+{
+  "task_dir": "C:\\Projects\\GPT\\anomized\\full_context\\synthesis-length",
+  "model": "gpt-5.4-pro",
+  "strategy": "Full Context",
+  "start_time": "2026-04-12T09:53:36.322309",
+  "end_time": "2026-04-12T10:22:08.574679",
+  "total_time_seconds": 1712.252,
+  "pos_count": 6,
+  "neg_count": 3,
+  "bk_size_bytes": 139,
+  "total_iterations": 1,
+  "total_prolog_tests": 6,
+  "total_subsumption_checks": 1,
+  "solved": true,
+  "solution": "p0([],0).\np0([_|T],B):-p0(T,C),p3(C,B).",
+  "iterations": [
+    {
+      "iteration": 1,
+      "hypothesis": "p0(A,B):-p4(A),p5(B).\np0(A,B):-p2(A,C),p0(C,D),p3(D,B).",
+      "llm_time_seconds": 540.966,
+      "prolog_test_time_seconds": 0,
+      "subsumption_check_time_seconds": 0.0,
+      "subsumption_pruned": false,
+      "prolog_test_run": true,
+      "candidates_evaluated": 3,
+      "result": "solution",
+      "covered_pos": 6,
+      "covered_neg": 0,
+      "missed_pos": 0,
+      "is_complete": true,
+      "f1_score": 1.0,
+      "num_literals": 8
+    }
+  ],
+  "f1_score": 1.0,
+  "num_literals": 5
+}
