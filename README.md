@@ -1,6 +1,9 @@
 # ALBI
 
-**LLM-Guided Inductive Logic Programming via Iterative Generate-Test-Constrain Refinement**
+**LLM-Guided Inductive Logic Programming via Iterative Generate-Test-Constrain Refinement** 
+
+https://doi.org/10.48550/arXiv.2611.05039
+
 
 ALBI is an ILP (Inductive Logic Programming) solver that uses LLMs to generate Prolog
 hypotheses, tests them against examples with SWI-Prolog, and learns constraints from
